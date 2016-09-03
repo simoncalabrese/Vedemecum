@@ -20,6 +20,7 @@
       <root url="jar://$PROJECT_DIR$/lib/jboss-logging-3.3.0.Final.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jsr250-api-1.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-6.0.3.jar!/" />
+      <root url="jar://$USER_HOME$/jd2/jre/lib/ext/jfxrt.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

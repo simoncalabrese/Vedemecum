@@ -7,7 +7,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="jfxrt" level="project" />
-    <orderEntry type="library" name="jpa" level="project" />
+    <orderEntry type="library" exported="" name="jpa" level="project" />
   </component>
 </module>
