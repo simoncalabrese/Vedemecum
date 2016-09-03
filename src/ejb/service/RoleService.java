@@ -4,20 +4,18 @@ import api.dto.RoleDto;
 import ejb.converter.RoleConverter;
 import model.dao.RoleDao;
 import model.entity.Role;
-
-import javax.inject.Inject;
 import java.util.List;
 
 /**
  * Created by simon on 31/08/16.
  */
 public class RoleService extends BaseService<RoleDao> {
-    @Inject
-    private RoleDao mansioneDao;
+
+    private RoleDao roleDao = new RoleDao();
 
     @Override
     public RoleDao getDao() {
-        return mansioneDao;
+        return roleDao;
     }
 
     public Role getMansioneById(Integer id) {
@@ -37,8 +35,7 @@ public class RoleService extends BaseService<RoleDao> {
     }
 
     public List<RoleDto> getAllMansioni() {
-        return converter(getDao().totRoles(), RoleConverter.ToDto.toMansioneDto);
+        return converter(getDao().totRoles(),RoleConverter.ToDto.toMansioneDto);
     }
-
 
 }

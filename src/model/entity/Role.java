@@ -21,7 +21,8 @@ public class Role {
 
     @Column(
             name = "COD_MANSIONE",
-            nullable = false
+            nullable = false,
+            unique = true
 
     )
     private String codRole;

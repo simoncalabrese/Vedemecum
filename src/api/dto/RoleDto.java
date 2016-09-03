@@ -1,37 +1,41 @@
 package api.dto;
 
+
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 /**
  * Created by simon on 31/08/16.
  */
 public class RoleDto {
 
-    private Integer idRole;
+    private StringProperty idRole;
 
-    private String codRole;
+    private StringProperty codRole;
 
-    private String desRole;
+    private StringProperty desRole;
 
-    public Integer getIdRole() {
+    public StringProperty getIdRole() {
         return idRole;
     }
 
     public void setIdRole(Integer idRole) {
-        this.idRole = idRole;
+        this.idRole = new SimpleStringProperty(idRole.toString());
     }
 
-    public String getCodRole() {
+    public StringProperty getCodRole() {
         return codRole;
     }
 
     public void setCodRole(String codRole) {
-        this.codRole = codRole;
+        this.codRole = new SimpleStringProperty(codRole);
     }
 
-    public String getDesRole() {
+    public StringProperty getDesRole() {
         return desRole;
     }
 
     public void setDesRole(String desRole) {
-        this.desRole = desRole;
+        this.desRole = new SimpleStringProperty(desRole);
     }
 }
