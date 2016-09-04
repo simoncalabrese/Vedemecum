@@ -21,6 +21,11 @@ public class BaseDaoImplementation implements BaseDaoInterface {
     }
 
 
+    protected CriteriaBuilder getCriteriaBuilder() {
+        return entityManager.getCriteriaBuilder();
+    }
+
+
     @SuppressWarnings("unchecked")
     public <T> List<T> getAll(T entity) {
 

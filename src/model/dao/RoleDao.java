@@ -30,8 +30,7 @@ public class RoleDao extends BaseDaoImplementation{
 
 
     public List<Role> totRoles() {
-        List<Role> roles = getAll(new Role());
-        return roles;
+        return getAll(new Role());
     }
 
 

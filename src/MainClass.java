@@ -15,8 +15,7 @@ import java.io.IOException;
 public class MainClass extends Application {
 
     private Stage primaryStage;
-    private BorderPane rootLayout;
-    private RoleController roleController = new RoleController();
+    private AnchorPane rootLayout;
 
     public static void main(String[] args) {
         launch(args);
@@ -47,9 +46,9 @@ public class MainClass extends Application {
     public void showRoles() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainClass.class.getResource("frontend/RoleView.fxml"));
+            loader.setLocation(MainClass.class.getResource("frontend/LoginView.fxml"));
             AnchorPane role = loader.load();
-            rootLayout.setCenter(role);
+            primaryStage.setScene(new Scene(role));
             RoleController roleController = new RoleController();
         } catch (IOException e) {
             e.printStackTrace();
