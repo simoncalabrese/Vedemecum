@@ -4,6 +4,8 @@ import api.dto.RoleDto;
 import ejb.converter.RoleConverter;
 import model.dao.RoleDao;
 import model.entity.Role;
+
+import javax.inject.Inject;
 import java.util.List;
 
 /**

@@ -5,13 +5,17 @@ import ejb.converter.UserConverter;
 import model.dao.UserDao;
 import model.entity.User;
 
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 import java.util.List;
 import java.util.stream.Collectors;
 
 /**
  * Created by simon on 04/09/16.
  */
+
 public class LoginService extends BaseService<UserDao> {
+
     private UserDao userDao = new UserDao();
 
     @Override
