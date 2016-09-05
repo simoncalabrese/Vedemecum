@@ -6,7 +6,6 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-import javafx.stage.Stage;
 import main.MainClass;
 
 /**
@@ -24,9 +23,8 @@ public class ViewDispatcher {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainClass.class.getClassLoader().getResource(view));
-            AnchorPane role = loader.load();
-            Stage s = MainClass.getPrimaryStage();
-            s.setScene(new Scene(role));
+            AnchorPane pane = loader.load();
+            MainClass.getPrimaryStage().setScene(new Scene(pane));
         } catch (IOException e) {
             e.printStackTrace();
         }

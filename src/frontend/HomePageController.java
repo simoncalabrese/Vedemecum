@@ -31,6 +31,12 @@ public class HomePageController {
 
     @FXML
     void openEmployee(ActionEvent event) {
+        dispatcher.dispatch(Enumerators.viewsPath.EMPLOYEE.getPath());
+
+    }
+
+    @FXML
+    void openRole(ActionEvent event) {
 
     }
 

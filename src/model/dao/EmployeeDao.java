@@ -9,18 +9,18 @@ import java.util.List;
  */
 public class EmployeeDao extends BaseDaoImplementation {
 
-    public void insertEmployee(Employee employee) {
-        insert(employee);
+    public Boolean insertEmployee(Employee employee) {
+        return insert(employee);
 
     }
 
-    public void editDipendente(Employee employee) {
-        update(employee);
+    public Boolean editDipendente(Employee employee) {
+        return update(employee);
 
     }
 
-    public void deleteEmployee(Integer id) {
-        delete(findEmployee(id));
+    public Boolean deleteEmployee(Integer id) {
+        return delete(findEmployee(id));
 
     }
 
