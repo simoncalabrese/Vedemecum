@@ -40,4 +40,8 @@ public class RoleService extends BaseService<RoleDao> {
         return converter(getDao().totRoles(),RoleConverter.ToDto.toMansioneDto);
     }
 
+    public Integer getIdRoleByDes(String des) {
+        return getDao().getIdRoleByDes(des);
+    }
+
 }

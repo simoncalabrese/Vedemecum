@@ -1,29 +1,22 @@
 package ejb.utils;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Created by simon on 05/09/16.
  */
 public class UtilDate {
 
-    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.ITALIAN);
-    private static final DateFormat format = new SimpleDateFormat("yyyy-MM-dd",Locale.ITALIAN);
+    private static final DateTimeFormatter sdf = DateTimeFormatter.ofPattern("dd MM yyyy");
 
-    public static String toString(final Date date){
-       return sdf.format(date);
+    public static String toString(final LocalDate date) {
+
+        return date != null ? date.format(sdf) : null;
     }
 
-    public static Date toDate(final String date) {
-        try {
-            return format.parse(date);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public static LocalDate toDate(final String date) {
+
+        return date.equals("") ? null : LocalDate.parse(date);
     }
 }

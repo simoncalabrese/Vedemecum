@@ -1,7 +1,7 @@
 package model.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -14,6 +14,7 @@ import java.util.List;
 public class Employee {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(
             name = "ID_DIPENDENTI",
             nullable = false
@@ -44,7 +45,7 @@ public class Employee {
     @Column(
             name = "DT_NASCITA"
     )
-    private Date dtNascita;
+    private LocalDate dtNascita;
 
     @Column(
             name = "CODICE_FISCALE",
@@ -122,11 +123,11 @@ public class Employee {
         this.sessoDipendente = sessoDipendente;
     }
 
-    public Date getDtNascita() {
+    public LocalDate getDtNascita() {
         return dtNascita;
     }
 
-    public void setDtNascita(Date dtNascita) {
+    public void setDtNascita(LocalDate dtNascita) {
         this.dtNascita = dtNascita;
     }
 

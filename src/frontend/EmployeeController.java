@@ -9,6 +9,7 @@ import api.dto.RoleDto;
 import ejb.service.EmployeeService;
 import ejb.service.RoleService;
 import ejb.utils.Enumerators;
+import ejb.utils.UtilDate;
 import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -25,6 +26,7 @@ public class EmployeeController {
 
     private EmployeeService employeeService = new EmployeeService();
     private RoleService roleService = new RoleService();
+    private Integer command = -1;
 
     @FXML
     private ResourceBundle resources;
@@ -93,17 +95,33 @@ public class EmployeeController {
     private DatePicker date;
 
     @FXML
+    void btnSubmit() {
+        EmployeeDto dto = new EmployeeDto();
+        dto.setNomeDipendente(nameTxt.getText().equals("") ? "" : nameTxt.getText());
+        dto.setCognomeDipendente(surnameText.getText().equals("") ? "" : surnameText.getText());
+        dto.setSessoDipendente(sexChoice.getValue());
+        dto.setDtNascita(UtilDate.toString(date.getValue()));
+        dto.setCodFiscale(cfText.getText().equals("") ? "" : cfText.getText());
+        dto.setTelephone(telText.getText().equals("") ? "" : telText.getText());
+        dto.setEmail(mailText.getText().equals("") ? "" : mailText.getText());
+        dto.setAddress(addressText.getText().equals("") ? "" : addressText.getText());
+        dto.setRole(roleService.getMansioneById(
+                roleService.getIdRoleByDes(roleChoice.getValue())
+        ));
+        if(command.equals(0)){
+            employeeService.insertEmployee(dto);
+        }else if(command.equals(1)) {
+            employeeService.updateEmployee(dto);
+        }
+
+
+    }
+
+    @FXML
     void addEmployee(ActionEvent event) {
         sudPane.setVisible(true);
-        ObservableList<String> choice = FXCollections.observableArrayList();
-        choice.add("M");
-        choice.add("F");
-        sexChoice.setItems(choice);
+        command = 0;
 
-        ObservableList<String> roleCod = FXCollections.observableArrayList();
-        List<RoleDto> roles = roleService.getAllMansioni();
-        roles.forEach(roleDto -> roleCod.add(roleDto.getCodRole().get()));
-        roleChoice.setItems(roleCod);
 
     }
 
@@ -114,6 +132,8 @@ public class EmployeeController {
 
     @FXML
     void editEmployee(ActionEvent event) {
+        sudPane.setVisible(true);
+        command = 1;
 
     }
 
@@ -140,6 +160,15 @@ public class EmployeeController {
         List<EmployeeDto> roleDtos = employeeService.getAllEmployees();
         roleDtos.forEach(lists::add);
         table.setItems(lists);
+        ObservableList<String> choice = FXCollections.observableArrayList();
+        choice.add("M");
+        choice.add("F");
+        sexChoice.setItems(choice);
+
+        ObservableList<String> roleCod = FXCollections.observableArrayList();
+        List<RoleDto> roles = roleService.getAllMansioni();
+        roles.forEach(roleDto -> roleCod.add(roleDto.getCodRole().get()));
+        roleChoice.setItems(roleCod);
 
 
     }

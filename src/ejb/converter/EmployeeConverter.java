@@ -19,7 +19,7 @@ public class EmployeeConverter {
                     employee.setNomeDipendente(dto.nomeDipendenteProperty().get());
                     employee.setCognomeDipendente(dto.cognomeDipendenteProperty().get());
                     employee.setSessoDipendente(dto.sessoDipendenteProperty().get());
-                    employee.setDtNascita(UtilDate.toDate(dto.dtNascitaProperty().get()));
+                    employee.setDtNascita(UtilDate.toDate(dto.dtNascitaProperty().getValue()));
                     employee.setCodFiscale(dto.codFiscaleProperty().get());
                     employee.setTelephone(dto.telephoneProperty().get());
                     employee.setAddress(dto.addressProperty().get());
