@@ -29,14 +29,14 @@ public class LoginService extends BaseService<UserDao> {
                 .filter(user -> user.getCod().equals(userDto.getUsername().toUpperCase())
                         && user.getPassword().equals(userDto.getPassword().toUpperCase()))
                 .collect(Collectors.toList());
-        if (users != null) {
-            return true;
-        } else {
-            return false;
-        }
+        return !(users.isEmpty());
     }
 
-    public void signinService(UserDto userDto){
-        getDao().insertUser(converter(userDto, UserConverter.toEntity.toUserEntity));
+    public Boolean signinService(UserDto userDto){
+        if(getDao().insertUser(converter(userDto, UserConverter.toEntity.toUserEntity))){
+            return true;
+        }else {
+            return false;
+        }
     }
 }

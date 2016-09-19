@@ -20,7 +20,7 @@ public class RoleDto {
     }
 
     public void setIdRole(Integer idRole) {
-        this.idRole = new SimpleStringProperty(idRole.toString());
+        this.idRole = idRole!=null ? new SimpleStringProperty(idRole.toString()) : null;
     }
 
     public StringProperty getCodRole() {

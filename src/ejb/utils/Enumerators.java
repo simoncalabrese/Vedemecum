@@ -22,4 +22,29 @@ public class Enumerators {
             return path;
         }
     }
+
+    public enum Alert {
+        INSERT("Errore nell' inserimento", "Errore sollevato durante l' inserimento nella classe: "),
+        UPDATE("Errore nella modifica", "Errore sollevato durante la modifica nella classe: "),
+        DELETE("Impossibile eliminare", "Errore sollevato durante l'eliminazione nella classe: "),
+        LOGINFIELDS("Dati non validi", "Inserire tutti i dati obbligatori"),
+        LOGINVALUES("Utente non trovato", "Inserire i dati corretti o registrarsi."),
+        SIGNINVALUES("Valori inseriti non validi" , "Password non corretta o Username già in uso");
+
+        private String head;
+        private String body;
+
+        Alert(String head, String body) {
+            this.head = head;
+            this.body = body;
+        }
+
+        public String getHead() {
+            return head;
+        }
+
+        public String getBody() {
+            return body;
+        }
+    }
 }

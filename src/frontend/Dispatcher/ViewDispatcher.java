@@ -1,7 +1,9 @@
 package frontend.Dispatcher;
 
+import ejb.utils.Enumerators;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -15,11 +17,11 @@ public class ViewDispatcher {
 
     static ViewDispatcher dispatcher = new ViewDispatcher();
 
-    public static ViewDispatcher getDispatcher(){
+    public static ViewDispatcher getDispatcher() {
         return dispatcher;
     }
 
-    public void dispatch(String view){
+    public void dispatch(String view) {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainClass.class.getClassLoader().getResource(view));
@@ -28,5 +30,14 @@ public class ViewDispatcher {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void alert(Enumerators.Alert msg, String variable) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("System Client Error");
+        alert.setHeaderText(msg.getHead());
+        alert.setContentText(msg.getBody() + (variable != null ? variable : ""));
+
+        alert.showAndWait();
     }
 }

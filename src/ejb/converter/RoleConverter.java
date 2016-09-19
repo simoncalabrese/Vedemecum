@@ -13,9 +13,11 @@ public class RoleConverter {
         public static SuperConverter<RoleDto, Role> toMansioneEntity =
                 dto -> {
                     Role entity = new Role();
-                    /*entity.setIdRole(dto.getIdRole());
-                    entity.setCodRole(dto.getCodRole());
-                    entity.setDesRole(dto.getDesRole());*/
+                    entity.setIdRole(dto.getIdRole()!=null ?
+                            Integer.valueOf(dto.getIdRole().getValue())
+                    : null);
+                    entity.setCodRole(dto.getCodRole().getValue());
+                    entity.setDesRole(dto.getDesRole().getValue());
                     return entity;
                 };
     }

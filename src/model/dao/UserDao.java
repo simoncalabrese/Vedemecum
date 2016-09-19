@@ -10,8 +10,8 @@ import java.util.List;
  */
 public class UserDao extends BaseDaoImplementation {
 
-    public void insertUser(User user) {
-        insert(user);
+    public Boolean insertUser(User user) {
+        return insert(user);
 
     }
 

@@ -2,13 +2,18 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.RoleController">
    <children>
-      <TableView fx:id="table" layoutX="97.0" layoutY="41.0" prefHeight="332.0" prefWidth="678.0">
+      <TableView fx:id="table" layoutX="97.0" layoutY="41.0" prefHeight="263.0" prefWidth="678.0">
         <columns>
           <TableColumn fx:id="idCol" prefWidth="75.0" text="ID Ruolo" />
           <TableColumn fx:id="codCol" prefWidth="75.0" text="Codice Ruolo" />
@@ -18,18 +23,36 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <ButtonBar layoutX="561.0" layoutY="527.0" prefHeight="40.0" prefWidth="296.0">
+      <ButtonBar layoutX="479.0" layoutY="310.0" prefHeight="40.0" prefWidth="296.0">
         <buttons>
-          <Button fx:id="addBtn" mnemonicParsing="false" text="Aggiungi" />
-            <Button fx:id="editBtn" mnemonicParsing="false" text="Modifica" />
-            <Button fx:id="delBrn" mnemonicParsing="false" text="Cancella" />
+          <Button mnemonicParsing="false" onAction="#addBtn" text="Aggiungi" />
+            <Button mnemonicParsing="false" onAction="#editBtn" text="Modifica" />
+            <Button mnemonicParsing="false" onAction="#delBrn" text="Cancella" />
         </buttons>
       </ButtonBar>
-      <ButtonBar layoutX="29.0" layoutY="528.0" prefHeight="40.0" prefWidth="85.0">
-        <buttons>
-          <Button mnemonicParsing="false" onAction="#homeBtn" text="Home" />
-        </buttons>
-      </ButtonBar>
-      <Button layoutX="662.0" layoutY="376.0" mnemonicParsing="false" onAction="#populateTable" text="Populate Table" />
+      <ButtonBar layoutX="29.0" layoutY="528.0" prefHeight="40.0" prefWidth="85.0" />
+      <Button layoutX="97.0" layoutY="304.0" mnemonicParsing="false" onAction="#populateTable" text="Populate Table" />
+    <Button layoutX="12.0" layoutY="567.0" mnemonicParsing="false" onAction="#homeBtn" text="Home" />
+      <GridPane fx:id="gridPane" layoutX="93.0" layoutY="373.0" prefHeight="168.0" prefWidth="687.0" visible="false">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" />
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="9.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="16.0" prefWidth="335.0" text="ID RUOLO" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="16.0" prefWidth="335.0" text="CODICE RUOLO" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="16.0" prefWidth="335.0" text="DESCRIZIONE RUOLO" GridPane.rowIndex="2" />
+            <TextField fx:id="codText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="desText" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#btnConfirm" prefHeight="26.0" prefWidth="260.0" text="Conferma" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="idLabel" alignment="CENTER" prefHeight="16.0" prefWidth="346.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
    </children>
 </AnchorPane>
