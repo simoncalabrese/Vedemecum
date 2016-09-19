@@ -2,6 +2,7 @@ package model.dao;
 
 
 import model.entity.Role;
+import model.entity.Role_;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -41,7 +42,8 @@ public class RoleDao extends BaseDaoImplementation{
         CriteriaBuilder cb = getCriteriaBuilder();
         CriteriaQuery<Integer> query = cb.createQuery(Integer.class);
         Root<Role> root = query.from(Role.class);
-        query.select(cb.equals(root.get(Role_.desRole),des));
+        query.select(root.get(Role_.idRole));
+        query.where(cb.equal(root.get(Role_.desRole),des));
         return entityManager.createQuery(query).getSingleResult();
     }
 
