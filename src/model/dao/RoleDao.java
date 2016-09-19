@@ -1,7 +1,11 @@
 package model.dao;
 
+
 import model.entity.Role;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 /**
@@ -31,6 +35,14 @@ public class RoleDao extends BaseDaoImplementation{
 
     public List<Role> totRoles() {
         return getAll(new Role());
+    }
+
+    public Integer getIdRoleByDes (String des) {
+        CriteriaBuilder cb = getCriteriaBuilder();
+        CriteriaQuery<Integer> query = cb.createQuery(Integer.class);
+        Root<Role> root = query.from(Role.class);
+        query.select(cb.equals(root.get(Role_.desRole),des));
+        return entityManager.createQuery(query).getSingleResult();
     }
 
 

@@ -12,7 +12,7 @@ import java.util.List;
 public class BaseDaoImplementation implements BaseDaoInterface {
 
 
-    private EntityManager entityManager = Persistence.createEntityManagerFactory("jpa").createEntityManager();
+    protected EntityManager entityManager = Persistence.createEntityManagerFactory("jpa").createEntityManager();
 
     private EntityTransaction transaction = entityManager.getTransaction();
 
