@@ -26,8 +26,9 @@ public class LoginService extends BaseService<UserDao> {
     public Boolean loginService(UserDto userDto) {
         List<User> users = getDao().login(userDto)
                 .stream()
-                .filter(user -> user.getCod().equals(userDto.getUsername())
-                        && user.getPassword().equals(userDto.getPassword())).collect(Collectors.toList());
+                .filter(user -> user.getCod().equals(userDto.getUsername().toUpperCase())
+                        && user.getPassword().equals(userDto.getPassword().toUpperCase()))
+                .collect(Collectors.toList());
         if (users != null) {
             return true;
         } else {

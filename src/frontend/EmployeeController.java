@@ -8,6 +8,8 @@ import api.dto.EmployeeDto;
 import api.dto.RoleDto;
 import ejb.service.EmployeeService;
 import ejb.service.RoleService;
+import ejb.utils.Enumerators;
+import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -113,6 +115,12 @@ public class EmployeeController {
     @FXML
     void editEmployee(ActionEvent event) {
 
+    }
+
+
+    @FXML
+    void HomePage(ActionEvent event) {
+        ViewDispatcher.getDispatcher().dispatch(Enumerators.viewsPath.HOMEPAGE.getPath());
     }
 
     @FXML

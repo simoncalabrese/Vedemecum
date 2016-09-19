@@ -37,7 +37,7 @@ public class HomePageController {
 
     @FXML
     void openRole(ActionEvent event) {
-
+        dispatcher.dispatch(Enumerators.viewsPath.ROLE.getPath());
     }
 
     @FXML
