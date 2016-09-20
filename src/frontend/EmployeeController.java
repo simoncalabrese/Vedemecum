@@ -95,15 +95,15 @@ public class EmployeeController {
     @FXML
     void addEmployee(ActionEvent event) {
         EmployeeDto dto = new EmployeeDto();
-        dto.setNomeDipendente(nameTxt.getText().equals("") ? "" : nameTxt.getText());
-        dto.setCognomeDipendente(surnameText.getText().equals("") ? "" : surnameText.getText());
-        dto.setSessoDipendente(sexChoice.getValue());
-        dto.setDtNascita(UtilDate.toString(date.getValue()));
-        dto.setCodFiscale(cfText.getText().equals("") ? "" : cfText.getText());
-        dto.setTelephone(telText.getText().equals("") ? "" : telText.getText());
-        dto.setEmail(mailText.getText().equals("") ? "" : mailText.getText());
-        dto.setAddress(addressText.getText().equals("") ? "" : addressText.getText());
-        dto.setRole(roleChoice.getValue());
+        dto.setNomeDipendente(nameTxt.getText().equals("") ? "" : nameTxt.getText().toUpperCase());
+        dto.setCognomeDipendente(surnameText.getText().equals("") ? "" : surnameText.getText().toUpperCase());
+        dto.setSessoDipendente(sexChoice.getValue().toUpperCase());
+        dto.setDtNascita(UtilDate.toString(date.getValue()).toUpperCase());
+        dto.setCodFiscale(cfText.getText().equals("") ? "" : cfText.getText().toUpperCase());
+        dto.setTelephone(telText.getText().equals("") ? "" : telText.getText().toUpperCase());
+        dto.setEmail(mailText.getText().equals("") ? "" : mailText.getText().toUpperCase());
+        dto.setAddress(addressText.getText().equals("") ? "" : addressText.getText().toUpperCase());
+        dto.setRole(roleChoice.getValue().toUpperCase());
 
         if (employeeService.insertEmployee(dto)) {
             populateTable();
@@ -115,25 +115,58 @@ public class EmployeeController {
 
     @FXML
     void delEmployee(ActionEvent event) {
+        if (table.getSelectionModel().getSelectedIndex() >= 0) {
+            if (employeeService.deleteEmployee(
+                    table.getItems()
+                            .get(table.getSelectionModel().getSelectedIndex())
+                            .getCodFiscale())) {
+                populateTable();
+            } else {
+                dispatcher.alert(Enumerators.Alert.DELETE,"Dipendenti");
+            }
+        }
 
     }
 
     @FXML
     void editEmployee(ActionEvent event) {
         EmployeeDto dto = new EmployeeDto();
-        dto.setNomeDipendente(nameTxt.getText().equals("") ? "" : nameTxt.getText());
-        dto.setCognomeDipendente(surnameText.getText().equals("") ? "" : surnameText.getText());
-        dto.setSessoDipendente(sexChoice.getValue());
-        dto.setDtNascita(UtilDate.toString(date.getValue()));
-        dto.setCodFiscale(cfText.getText().equals("") ? "" : cfText.getText());
-        dto.setTelephone(telText.getText().equals("") ? "" : telText.getText());
-        dto.setEmail(mailText.getText().equals("") ? "" : mailText.getText());
-        dto.setAddress(addressText.getText().equals("") ? "" : addressText.getText());
-        dto.setRole(roleChoice.getValue());
-        if (employeeService.updateEmployee(dto)) {
-            populateTable();
+        if (table.getSelectionModel().getSelectedIndex() >= 0) {
+            String oldCf = table.getItems().get(table.getSelectionModel().getSelectedIndex()).getCodFiscale();
+            dto.setNomeDipendente(nameTxt.getText().equals("") ? "" : nameTxt.getText().toUpperCase());
+            dto.setCognomeDipendente(surnameText.getText().equals("") ? "" : surnameText.getText().toUpperCase());
+            dto.setSessoDipendente(sexChoice.getValue().toUpperCase());
+            dto.setDtNascita(UtilDate.toString(date.getValue()).toUpperCase());
+            dto.setCodFiscale(cfText.getText().equals("") ? "" : cfText.getText().toUpperCase());
+            dto.setTelephone(telText.getText().equals("") ? "" : telText.getText().toUpperCase());
+            dto.setEmail(mailText.getText().equals("") ? "" : mailText.getText().toUpperCase());
+            dto.setAddress(addressText.getText().equals("") ? "" : addressText.getText().toUpperCase());
+            dto.setRole(roleChoice.getValue().toUpperCase());
+            if (employeeService.updateEmployee(dto, oldCf)) {
+                populateTable();
+            } else {
+                dispatcher.alert(Enumerators.Alert.UPDATE, "Dipendenti");
+            }
         } else {
-            dispatcher.alert(Enumerators.Alert.UPDATE, "Dipendenti");
+            dispatcher.alert(Enumerators.Alert.SELECTIONROW, null);
+        }
+    }
+
+    @FXML
+    void populateText() {
+        if (table.getSelectionModel().getSelectedIndex() >= 0) {
+            EmployeeDto employeeDto = table.getItems().get(table.getSelectionModel().getSelectedIndex());
+            nameTxt.setText(employeeDto.getNomeDipendente());
+            surnameText.setText(employeeDto.getCognomeDipendente());
+            sexChoice.setValue(employeeDto.getSessoDipendente());
+            date.setValue(UtilDate.toDate(employeeDto.getDtNascita()));
+            cfText.setText(employeeDto.getCodFiscale());
+            telText.setText(employeeDto.getTelephone());
+            mailText.setText(employeeDto.getEmail());
+            addressText.setText(employeeDto.getAddress());
+            roleChoice.setValue(employeeDto.getRole());
+        } else {
+            dispatcher.alert(Enumerators.Alert.SELECTIONROW, null);
         }
     }
 

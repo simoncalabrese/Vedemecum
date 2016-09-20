@@ -29,20 +29,28 @@ public class EmployeeService extends BaseService<EmployeeDao> {
 
     public Boolean insertEmployee(EmployeeDto employeeDto) {
         RoleDto role = converter(roleDao.getIdRoleByDes(employeeDto.getRole()), RoleConverter.ToDto.toMansioneDto);
-        return getDao().insertEmployee(biconverter(employeeDto, role, EmployeeConverter.ToEntity.toEmployeeEntity));
+        return getDao()
+                .insertEmployee(
+                        biconverter(employeeDto, role, EmployeeConverter.ToEntity.toEmployeeEntity));
     }
 
-    public Boolean updateEmployee(EmployeeDto employeeDto) {
+    public Boolean updateEmployee(EmployeeDto employeeDto, String oldCf) {
         RoleDto role = converter(roleDao.getIdRoleByDes(employeeDto.getRole()), RoleConverter.ToDto.toMansioneDto);
-        return getDao().editDipendente(biconverter(employeeDto,role, EmployeeConverter.ToEntity.toEmployeeEntity));
+        employeeDto.setIdDipedente(
+                employeeDao.getEmployeeIdByCF(oldCf)
+                        .getIdDipedente()
+                        .toString());
+        return getDao()
+                .editDipendente(
+                        biconverter(employeeDto, role, EmployeeConverter.ToEntity.toEmployeeEntity));
     }
 
-    public Boolean deleteEmployee(Integer id) {
-        return getDao().deleteEmployee(id);
+    public Boolean deleteEmployee(String cf) {
+        return getDao().deleteEmployee(getDao().getEmployeeIdByCF(cf).getIdDipedente());
     }
 
     public List<EmployeeDto> getAllEmployees() {
-        return converter(getDao().totEmployees(),EmployeeConverter.ToDto.toEmployeeDto);
+        return converter(getDao().totEmployees(), EmployeeConverter.ToDto.toEmployeeDto);
     }
 
 }

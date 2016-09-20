@@ -1,7 +1,11 @@
 package model.dao;
 
 import model.entity.Employee;
+import model.entity.Employee_;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 /**
@@ -33,5 +37,15 @@ public class EmployeeDao extends BaseDaoImplementation {
     public List<Employee> totEmployees() {
 
         return getAll(new Employee());
+    }
+
+    public Employee getEmployeeIdByCF(String codFiscale) {
+        CriteriaBuilder cb = getCriteriaBuilder();
+        CriteriaQuery<Employee> query = cb.createQuery(Employee.class);
+        Root<Employee> root = query.from(Employee.class);
+        query.select(root);
+        query.where(cb.equal(root.get(Employee_.codFiscale),codFiscale));
+        return entityManager.createQuery(query).getSingleResult();
+
     }
 }

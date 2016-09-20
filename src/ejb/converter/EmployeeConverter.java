@@ -13,9 +13,12 @@ import model.entity.Role;
 public class EmployeeConverter {
 
     public static class ToEntity {
-        public static BiSuperConverter<EmployeeDto,RoleDto, Employee> toEmployeeEntity =
-                (dto,dto1) -> {
+        public static BiSuperConverter<EmployeeDto, RoleDto, Employee> toEmployeeEntity =
+                (dto, dto1) -> {
                     Employee employee = new Employee();
+                    employee.setIdDipedente(dto.getIdDipedente() != null
+                            ? Integer.valueOf(dto.getIdDipedente())
+                            : null);
                     employee.setNomeDipendente(dto.nomeDipendenteProperty().get());
                     employee.setCognomeDipendente(dto.cognomeDipendenteProperty().get());
                     employee.setSessoDipendente(dto.sessoDipendenteProperty().get());
@@ -30,7 +33,7 @@ public class EmployeeConverter {
     }
 
     public static class ToDto {
-        public static SuperConverter<Employee,EmployeeDto> toEmployeeDto =
+        public static SuperConverter<Employee, EmployeeDto> toEmployeeDto =
                 entity -> {
                     EmployeeDto dto = new EmployeeDto();
                     dto.setIdDipedente(entity.getIdDipedente().toString());

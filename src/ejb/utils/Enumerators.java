@@ -29,7 +29,8 @@ public class Enumerators {
         DELETE("Impossibile eliminare", "Errore sollevato durante l'eliminazione nella classe: "),
         LOGINFIELDS("Dati non validi", "Inserire tutti i dati obbligatori"),
         LOGINVALUES("Utente non trovato", "Inserire i dati corretti o registrarsi."),
-        SIGNINVALUES("Valori inseriti non validi" , "Password non corretta o Username già in uso");
+        SIGNINVALUES("Valori inseriti non validi" , "Password non corretta o Username già in uso"),
+        SELECTIONROW("Nessuna riga selezionata", "Selezionare almeno una riga dalla tabella per continuare");
 
         private String head;
         private String body;
