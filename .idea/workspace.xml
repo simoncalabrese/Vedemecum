@@ -20,12 +20,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/model/entity/Employee.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/model/entity/Employee.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/EmployeeView.fxml" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/EmployeeView.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ejb/converter/EmployeeConverter.java" afterPath="$PROJECT_DIR$/src/ejb/converter/EmployeeConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ejb/service/EmployeeService.java" afterPath="$PROJECT_DIR$/src/ejb/service/EmployeeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ejb/utils/Enumerators.java" afterPath="$PROJECT_DIR$/src/ejb/utils/Enumerators.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/EmployeeController.java" afterPath="$PROJECT_DIR$/src/frontend/EmployeeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/EmployeeView.fxml" afterPath="$PROJECT_DIR$/src/frontend/EmployeeView.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/dao/EmployeeDao.java" afterPath="$PROJECT_DIR$/src/model/dao/EmployeeDao.java" />
     </list>
     <ignored path="ProgettoIng.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -725,7 +719,14 @@
       <option name="project" value="LOCAL" />
       <updated>1474375345279</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="completed employee">
+      <created>1474388012533</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1474388012533</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -748,8 +749,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35157546" sideWeight="0.538695" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965213" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.49603623" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35157546" sideWeight="0.46130502" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32669982" sideWeight="0.49603623" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35157546" sideWeight="0.46130502" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24212272" sideWeight="0.49150622" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -812,7 +813,8 @@
     <MESSAGE value="make metamodel" />
     <MESSAGE value="fix converter function" />
     <MESSAGE value="add employee" />
-    <option name="LAST_COMMIT_MESSAGE" value="add employee" />
+    <MESSAGE value="completed employee" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed employee" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
