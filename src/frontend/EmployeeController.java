@@ -105,9 +105,7 @@ public class EmployeeController {
         dto.setTelephone(telText.getText().equals("") ? "" : telText.getText());
         dto.setEmail(mailText.getText().equals("") ? "" : mailText.getText());
         dto.setAddress(addressText.getText().equals("") ? "" : addressText.getText());
-        dto.setRole(roleService.getMansioneById(
-                roleService.getIdRoleByDes(roleChoice.getValue())
-        ));
+        dto.setRole(roleChoice.getValue());
         if(command.equals(0)){
             employeeService.insertEmployee(dto);
         }else if(command.equals(1)) {
@@ -155,7 +153,7 @@ public class EmployeeController {
         telCol.setCellValueFactory(employee -> employee.getValue().telephoneProperty());
         mailCol.setCellValueFactory(employee -> employee.getValue().emailProperty());
         addrCol.setCellValueFactory(employee -> employee.getValue().addressProperty());
-        roleCol.setCellValueFactory(employee -> employee.getValue().roleProperty().getCodRole());
+        roleCol.setCellValueFactory(employee -> employee.getValue().roleProperty());
         ObservableList<EmployeeDto> lists = FXCollections.observableArrayList();
         List<EmployeeDto> roleDtos = employeeService.getAllEmployees();
         roleDtos.forEach(lists::add);

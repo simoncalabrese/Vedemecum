@@ -13,7 +13,7 @@ import model.entity.Role;
 public class EmployeeConverter {
 
     public static class ToEntity {
-        public static SuperConverter<EmployeeDto, Employee> toEmployeeEntity =
+        public static BiSuperConverter<EmployeeDto, Employee> toEmployeeEntity =
                 dto -> {
                     Employee employee = new Employee();
                     employee.setNomeDipendente(dto.nomeDipendenteProperty().get());

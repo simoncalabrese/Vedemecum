@@ -32,12 +32,21 @@ public class EmployeeDto {
 
     private StringProperty role;
 
+
+    public String getIdDipedente() {
+        return idDipedente.get();
+    }
+
     public StringProperty idDipedenteProperty() {
         return idDipedente;
     }
 
     public void setIdDipedente(String idDipedente) {
-        this.idDipedente = new SimpleStringProperty(idDipedente);
+        this.idDipedente.set(idDipedente);
+    }
+
+    public String getNomeDipendente() {
+        return nomeDipendente.get();
     }
 
     public StringProperty nomeDipendenteProperty() {
@@ -45,7 +54,11 @@ public class EmployeeDto {
     }
 
     public void setNomeDipendente(String nomeDipendente) {
-        this.nomeDipendente = new SimpleStringProperty(nomeDipendente);
+        this.nomeDipendente.set(nomeDipendente);
+    }
+
+    public String getCognomeDipendente() {
+        return cognomeDipendente.get();
     }
 
     public StringProperty cognomeDipendenteProperty() {
@@ -53,7 +66,11 @@ public class EmployeeDto {
     }
 
     public void setCognomeDipendente(String cognomeDipendente) {
-        this.cognomeDipendente = new SimpleStringProperty(cognomeDipendente);
+        this.cognomeDipendente.set(cognomeDipendente);
+    }
+
+    public String getSessoDipendente() {
+        return sessoDipendente.get();
     }
 
     public StringProperty sessoDipendenteProperty() {
@@ -61,7 +78,11 @@ public class EmployeeDto {
     }
 
     public void setSessoDipendente(String sessoDipendente) {
-        this.sessoDipendente = new SimpleStringProperty(sessoDipendente);
+        this.sessoDipendente.set(sessoDipendente);
+    }
+
+    public String getDtNascita() {
+        return dtNascita.get();
     }
 
     public StringProperty dtNascitaProperty() {
@@ -69,7 +90,11 @@ public class EmployeeDto {
     }
 
     public void setDtNascita(String dtNascita) {
-        this.dtNascita = new SimpleStringProperty(dtNascita);
+        this.dtNascita.set(dtNascita);
+    }
+
+    public String getCodFiscale() {
+        return codFiscale.get();
     }
 
     public StringProperty codFiscaleProperty() {
@@ -77,7 +102,11 @@ public class EmployeeDto {
     }
 
     public void setCodFiscale(String codFiscale) {
-        this.codFiscale = new SimpleStringProperty(codFiscale);
+        this.codFiscale.set(codFiscale);
+    }
+
+    public String getTelephone() {
+        return telephone.get();
     }
 
     public StringProperty telephoneProperty() {
@@ -85,7 +114,11 @@ public class EmployeeDto {
     }
 
     public void setTelephone(String telephone) {
-        this.telephone = new SimpleStringProperty(telephone);
+        this.telephone.set(telephone);
+    }
+
+    public String getEmail() {
+        return email.get();
     }
 
     public StringProperty emailProperty() {
@@ -93,7 +126,11 @@ public class EmployeeDto {
     }
 
     public void setEmail(String email) {
-        this.email = new SimpleStringProperty(email);
+        this.email.set(email);
+    }
+
+    public String getAddress() {
+        return address.get();
     }
 
     public StringProperty addressProperty() {
@@ -101,16 +138,18 @@ public class EmployeeDto {
     }
 
     public void setAddress(String address) {
-        this.address = new SimpleStringProperty(address);
+        this.address.set(address);
     }
 
-    public RoleDto roleProperty() {
-        RoleDto dto = new RoleDto();
-        dto.setCodRole(role.get());
-        return dto;
+    public String getRole() {
+        return role.get();
     }
 
-    public void setRole(Role role) {
-        this.role = new SimpleStringProperty(role.getCodRole());
+    public StringProperty roleProperty() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role.set(role);
     }
 }

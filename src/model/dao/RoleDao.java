@@ -38,12 +38,12 @@ public class RoleDao extends BaseDaoImplementation{
         return getAll(new Role());
     }
 
-    public Integer getIdRoleByDes (String des) {
+    public Role getIdRoleByDes (String des) {
         CriteriaBuilder cb = getCriteriaBuilder();
-        CriteriaQuery<Integer> query = cb.createQuery(Integer.class);
+        CriteriaQuery<Role> query = cb.createQuery(Role.class);
         Root<Role> root = query.from(Role.class);
-        query.select(root.get(Role_.idRole));
-        query.where(cb.equal(root.get(Role_.desRole),des));
+        query.select(root);
+        query.where(cb.equal(root.get(Role_.codRole),des));
         return entityManager.createQuery(query).getSingleResult();
     }
 

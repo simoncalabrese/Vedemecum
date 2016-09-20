@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
  */
 public class UtilDate {
 
-    private static final DateTimeFormatter sdf = DateTimeFormatter.ofPattern("dd MM yyyy");
+    private static final DateTimeFormatter sdf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     public static String toString(final LocalDate date) {
 
@@ -16,7 +16,7 @@ public class UtilDate {
     }
 
     public static LocalDate toDate(final String date) {
-
+        System.out.println(date);
         return date.equals("") ? null : LocalDate.parse(date);
     }
 }
