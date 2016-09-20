@@ -7,7 +7,6 @@ import ejb.converter.RoleConverter;
 import model.dao.EmployeeDao;
 import model.dao.RoleDao;
 import model.entity.Employee;
-import model.entity.Role;
 
 import java.util.List;
 
@@ -16,11 +15,12 @@ import java.util.List;
  */
 public class EmployeeService extends BaseService<EmployeeDao> {
 
-    private EmployeeDao roleDao = new EmployeeDao();
+    private EmployeeDao employeeDao = new EmployeeDao();
+    private RoleDao roleDao = new RoleDao();
 
     @Override
     public EmployeeDao getDao() {
-        return roleDao;
+        return employeeDao;
     }
 
     public Employee getEmployeeById(Integer id) {
@@ -28,15 +28,17 @@ public class EmployeeService extends BaseService<EmployeeDao> {
     }
 
     public Boolean insertEmployee(EmployeeDto employeeDto) {
-        return getDao().insertEmployee(converter(employeeDto, EmployeeConverter.ToEntity.toEmployeeEntity));
+        RoleDto role = converter(roleDao.getIdRoleByDes(employeeDto.getRole()), RoleConverter.ToDto.toMansioneDto);
+        return getDao().insertEmployee(biconverter(employeeDto, role, EmployeeConverter.ToEntity.toEmployeeEntity));
     }
 
     public Boolean updateEmployee(EmployeeDto employeeDto) {
-        return getDao().editDipendente(converter(employeeDto, EmployeeConverter.ToEntity.toEmployeeEntity));
+        RoleDto role = converter(roleDao.getIdRoleByDes(employeeDto.getRole()), RoleConverter.ToDto.toMansioneDto);
+        return getDao().editDipendente(biconverter(employeeDto,role, EmployeeConverter.ToEntity.toEmployeeEntity));
     }
 
-    public Boolean deleteEmployee(Integer idRole) {
-        return getDao().deleteEmployee(idRole);
+    public Boolean deleteEmployee(Integer id) {
+        return getDao().deleteEmployee(id);
     }
 
     public List<EmployeeDto> getAllEmployees() {

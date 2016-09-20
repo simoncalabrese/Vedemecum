@@ -5,6 +5,7 @@ import api.interfaces.BaseServiceInterface;
 import model.dao.BaseDaoInterface;
 
 import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -21,6 +22,10 @@ public abstract class BaseService<T extends BaseDaoInterface> implements BaseSer
 
     public <I, O> List<O> converter(List<I> input, Function<I, O> converter) {
         return input.stream().map(converter).collect(Collectors.toList());
+    }
+
+    public <I,L,O> O biconverter(I input1, L input2, BiFunction<I,L,O> converter) {
+        return converter.apply(input1,input2);
     }
 
 }
