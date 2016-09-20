@@ -49,7 +49,8 @@ public class Employee {
 
     @Column(
             name = "CODICE_FISCALE",
-            nullable = false
+            nullable = false,
+            unique = true
     )
     private String codFiscale;
 

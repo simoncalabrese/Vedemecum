@@ -42,7 +42,7 @@ public class EmployeeDto {
     }
 
     public void setIdDipedente(String idDipedente) {
-        this.idDipedente.set(idDipedente);
+        this.idDipedente = new SimpleStringProperty(idDipedente);
     }
 
     public String getNomeDipendente() {
@@ -54,7 +54,7 @@ public class EmployeeDto {
     }
 
     public void setNomeDipendente(String nomeDipendente) {
-        this.nomeDipendente.set(nomeDipendente);
+        this.nomeDipendente = new SimpleStringProperty(nomeDipendente);
     }
 
     public String getCognomeDipendente() {
@@ -66,7 +66,7 @@ public class EmployeeDto {
     }
 
     public void setCognomeDipendente(String cognomeDipendente) {
-        this.cognomeDipendente.set(cognomeDipendente);
+        this.cognomeDipendente = new SimpleStringProperty(cognomeDipendente);
     }
 
     public String getSessoDipendente() {
@@ -78,7 +78,7 @@ public class EmployeeDto {
     }
 
     public void setSessoDipendente(String sessoDipendente) {
-        this.sessoDipendente.set(sessoDipendente);
+        this.sessoDipendente = new SimpleStringProperty(sessoDipendente);
     }
 
     public String getDtNascita() {
@@ -90,7 +90,7 @@ public class EmployeeDto {
     }
 
     public void setDtNascita(String dtNascita) {
-        this.dtNascita.set(dtNascita);
+        this.dtNascita = new SimpleStringProperty(dtNascita);
     }
 
     public String getCodFiscale() {
@@ -102,7 +102,7 @@ public class EmployeeDto {
     }
 
     public void setCodFiscale(String codFiscale) {
-        this.codFiscale.set(codFiscale);
+        this.codFiscale = new SimpleStringProperty(codFiscale);
     }
 
     public String getTelephone() {
@@ -114,7 +114,7 @@ public class EmployeeDto {
     }
 
     public void setTelephone(String telephone) {
-        this.telephone.set(telephone);
+        this.telephone = new SimpleStringProperty(telephone);
     }
 
     public String getEmail() {
@@ -126,7 +126,7 @@ public class EmployeeDto {
     }
 
     public void setEmail(String email) {
-        this.email.set(email);
+        this.email = new SimpleStringProperty(email);
     }
 
     public String getAddress() {
@@ -138,7 +138,7 @@ public class EmployeeDto {
     }
 
     public void setAddress(String address) {
-        this.address.set(address);
+        this.address = new SimpleStringProperty(address);
     }
 
     public String getRole() {
@@ -150,6 +150,6 @@ public class EmployeeDto {
     }
 
     public void setRole(String role) {
-        this.role.set(role);
+        this.role = new SimpleStringProperty(role);
     }
 }

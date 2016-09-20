@@ -26,7 +26,7 @@ public class EmployeeController {
 
     private EmployeeService employeeService = new EmployeeService();
     private RoleService roleService = new RoleService();
-    private Integer command = -1;
+    ViewDispatcher dispatcher = ViewDispatcher.getDispatcher();
 
     @FXML
     private ResourceBundle resources;
@@ -65,9 +65,6 @@ public class EmployeeController {
     private TableColumn<EmployeeDto, String> roleCol;
 
     @FXML
-    private AnchorPane sudPane;
-
-    @FXML
     private TextField nameTxt;
 
     @FXML
@@ -94,8 +91,9 @@ public class EmployeeController {
     @FXML
     private DatePicker date;
 
+
     @FXML
-    void btnSubmit() {
+    void addEmployee(ActionEvent event) {
         EmployeeDto dto = new EmployeeDto();
         dto.setNomeDipendente(nameTxt.getText().equals("") ? "" : nameTxt.getText());
         dto.setCognomeDipendente(surnameText.getText().equals("") ? "" : surnameText.getText());
@@ -106,20 +104,12 @@ public class EmployeeController {
         dto.setEmail(mailText.getText().equals("") ? "" : mailText.getText());
         dto.setAddress(addressText.getText().equals("") ? "" : addressText.getText());
         dto.setRole(roleChoice.getValue());
-        if(command.equals(0)){
-            employeeService.insertEmployee(dto);
-        }else if(command.equals(1)) {
-            employeeService.updateEmployee(dto);
+
+        if (employeeService.insertEmployee(dto)) {
+            populateTable();
+        } else {
+            dispatcher.alert(Enumerators.Alert.INSERT, "Dipendenti");
         }
-
-
-    }
-
-    @FXML
-    void addEmployee(ActionEvent event) {
-        sudPane.setVisible(true);
-        command = 0;
-
 
     }
 
@@ -130,21 +120,31 @@ public class EmployeeController {
 
     @FXML
     void editEmployee(ActionEvent event) {
-        sudPane.setVisible(true);
-        command = 1;
-
+        EmployeeDto dto = new EmployeeDto();
+        dto.setNomeDipendente(nameTxt.getText().equals("") ? "" : nameTxt.getText());
+        dto.setCognomeDipendente(surnameText.getText().equals("") ? "" : surnameText.getText());
+        dto.setSessoDipendente(sexChoice.getValue());
+        dto.setDtNascita(UtilDate.toString(date.getValue()));
+        dto.setCodFiscale(cfText.getText().equals("") ? "" : cfText.getText());
+        dto.setTelephone(telText.getText().equals("") ? "" : telText.getText());
+        dto.setEmail(mailText.getText().equals("") ? "" : mailText.getText());
+        dto.setAddress(addressText.getText().equals("") ? "" : addressText.getText());
+        dto.setRole(roleChoice.getValue());
+        if (employeeService.updateEmployee(dto)) {
+            populateTable();
+        } else {
+            dispatcher.alert(Enumerators.Alert.UPDATE, "Dipendenti");
+        }
     }
 
 
     @FXML
     void HomePage(ActionEvent event) {
-        ViewDispatcher.getDispatcher().dispatch(Enumerators.viewsPath.HOMEPAGE.getPath());
+        dispatcher.dispatch(Enumerators.viewsPath.HOMEPAGE.getPath());
     }
 
     @FXML
     void initialize() {
-        sudPane.setVisible(false);
-
         nameCol.setCellValueFactory(employee -> employee.getValue().nomeDipendenteProperty());
         surnameCol.setCellValueFactory(employee -> employee.getValue().cognomeDipendenteProperty());
         sexCol.setCellValueFactory(employee -> employee.getValue().sessoDipendenteProperty());
@@ -154,10 +154,7 @@ public class EmployeeController {
         mailCol.setCellValueFactory(employee -> employee.getValue().emailProperty());
         addrCol.setCellValueFactory(employee -> employee.getValue().addressProperty());
         roleCol.setCellValueFactory(employee -> employee.getValue().roleProperty());
-        ObservableList<EmployeeDto> lists = FXCollections.observableArrayList();
-        List<EmployeeDto> roleDtos = employeeService.getAllEmployees();
-        roleDtos.forEach(lists::add);
-        table.setItems(lists);
+        populateTable();
         ObservableList<String> choice = FXCollections.observableArrayList();
         choice.add("M");
         choice.add("F");
@@ -169,5 +166,12 @@ public class EmployeeController {
         roleChoice.setItems(roleCod);
 
 
+    }
+
+    private void populateTable() {
+        ObservableList<EmployeeDto> lists = FXCollections.observableArrayList();
+        List<EmployeeDto> roleDtos = employeeService.getAllEmployees();
+        roleDtos.forEach(lists::add);
+        table.setItems(lists);
     }
 }
