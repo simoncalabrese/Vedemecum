@@ -1,6 +1,6 @@
 package model.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 import javax.annotation.Generated;
 import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
@@ -19,7 +19,7 @@ public abstract class Employee_ {
 	public static volatile SingularAttribute<Employee, String> nomeDipendente;
 	public static volatile ListAttribute<Employee, Sdsi> sdsis;
 	public static volatile SingularAttribute<Employee, String> sessoDipendente;
-	public static volatile SingularAttribute<Employee, Date> dtNascita;
+	public static volatile SingularAttribute<Employee, LocalDate> dtNascita;
 	public static volatile ListAttribute<Employee, EmployeeStrumentation> employeeStrumentations;
 	public static volatile SingularAttribute<Employee, String> cognomeDipendente;
 	public static volatile SingularAttribute<Employee, String> email;

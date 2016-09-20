@@ -16,7 +16,6 @@
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true">
         <sourceOutputDir name="src/" />
-        <outputRelativeToContentRoot value="true" />
         <processor name="org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor" />
         <processorPath useClasspath="true" />
       </profile>
