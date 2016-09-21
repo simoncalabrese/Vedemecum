@@ -31,7 +31,9 @@ public class Enumerators {
         LOGINFIELDS("Dati non validi", "Inserire tutti i dati obbligatori"),
         LOGINVALUES("Utente non trovato", "Inserire i dati corretti o registrarsi."),
         SIGNINVALUES("Valori inseriti non validi" , "Password non corretta o Username già in uso"),
-        SELECTIONROW("Nessuna riga selezionata", "Selezionare almeno una riga dalla tabella per continuare");
+        SELECTIONROW("Nessuna riga selezionata", "Selezionare almeno una riga dalla tabella per continuare"),
+        VALUES("Dato non inserito", "Dato non inserito nei campi obligatori "),
+        VALUESNOTVALID("Dato non valido" , "Tipo dato inserito non valido per il campo: ");
 
         private String head;
         private String body;
