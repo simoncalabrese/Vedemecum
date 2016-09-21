@@ -58,26 +58,44 @@ public class SpaceController {
     @FXML
     void btnAdd() {
         SpaceDto spaceDto = validDto();
-        if(spaceDto!=null) {
+        if (spaceDto != null) {
             if (spaceService.insertSpace(spaceDto)) {
                 populateTable();
             } else {
                 dispatcher.alert(Enumerators.Alert.INSERT, "Impianti");
             }
-        }else {
-            dispatcher.alert(Enumerators.Alert.VALUES,null);
+        } else {
+            dispatcher.alert(Enumerators.Alert.VALUES, null);
         }
 
     }
 
     @FXML
     void btnDel() {
-
+        if (table.getSelectionModel().getSelectedIndex() >= 0) {
+            if (spaceService.deleteSpace(
+                    Integer.valueOf(table.getItems()
+                            .get(table.getSelectionModel().getSelectedIndex())
+                            .getIdSpace()))) {
+                populateTable();
+            } else {
+                dispatcher.alert(Enumerators.Alert.DELETE, "Dipendenti");
+            }
+        }
     }
 
     @FXML
     void btnEdit() {
-
+        SpaceDto spaceDto = validDto();
+        if (spaceDto != null) {
+            if (spaceService.upadteSpace(spaceDto)) {
+                populateTable();
+            } else {
+                dispatcher.alert(Enumerators.Alert.UPDATE, "Impianti");
+            }
+        } else {
+            dispatcher.alert(Enumerators.Alert.VALUES, null);
+        }
     }
 
     @FXML
@@ -91,6 +109,7 @@ public class SpaceController {
         if (table.getSelectionModel().getSelectedIndex() >= 0) {
             SpaceDto spaceDto = table.getItems().get(table.getSelectionModel().getSelectedIndex());
             idText.setText(spaceDto.getIdSpace());
+            idText.setEditable(false);
             desText.setText(spaceDto.getDesSpace());
             addressText.setText(spaceDto.getAddressSpace());
             roomText.setText(spaceDto.getAmntRoom());
