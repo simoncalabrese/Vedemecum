@@ -9,7 +9,8 @@ public class Enumerators {
         LOGIN("frontend/LoginView.fxml"),
         HOMEPAGE("frontend/HomePage.fxml"),
         ROLE("frontend/RoleView.fxml"),
-        EMPLOYEE("frontend/EmployeeView.fxml");
+        EMPLOYEE("frontend/EmployeeView.fxml"),
+        SPACE("frontend/SpaceView.fxml");
 
 
         private String path;

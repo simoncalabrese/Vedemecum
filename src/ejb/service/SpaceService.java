@@ -28,11 +28,13 @@ public class SpaceService extends BaseService<SpaceDao> {
     }
 
     public Boolean insertSpace(SpaceDto spaceDto) {
-        return getDao().insertSpace(//Space);
+        //return getDao().insertSpace(//Space);
+        return null;
     }
 
     public Boolean upadteSpace(SpaceDto spaceDto) {
-        return getDao().editSpace(//Space);
+        //return getDao().editSpace(//Space);
+        return null;
     }
 
     public Boolean deleteSpace(Integer id) {

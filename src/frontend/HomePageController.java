@@ -42,6 +42,7 @@ public class HomePageController {
 
     @FXML
     void openSpace(ActionEvent event) {
+        dispatcher.dispatch(Enumerators.viewsPath.SPACE.getPath());
 
     }
 
