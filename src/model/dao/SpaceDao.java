@@ -9,18 +9,18 @@ import java.util.List;
  */
 public class SpaceDao extends BaseDaoImplementation{
 
-    public void insertSpace(Space space) {
-        insert(space);
+    public Boolean insertSpace(Space space) {
+        return insert(space);
 
     }
 
-    public void editSpace(Space space) {
-        update(space);
+    public Boolean editSpace(Space space) {
+        return update(space);
 
     }
 
-    public void deleteSpace(Integer id) {
-        delete(findSpace(id));
+    public Boolean deleteSpace(Integer id) {
+        return delete(findSpace(id));
 
     }
 

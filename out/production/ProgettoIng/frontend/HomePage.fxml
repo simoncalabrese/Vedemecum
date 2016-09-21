@@ -20,10 +20,10 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" onAction="#openEmployee" prefHeight="26.0" prefWidth="370.0" text="Dipendenti" />
-            <Button mnemonicParsing="false" onAction="#openStrumentation" prefHeight="26.0" prefWidth="372.0" text="Strumentazioni" GridPane.columnIndex="1" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openEmployee" prefHeight="26.0" prefWidth="370.0" text="Dipendenti" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openStrumentation" prefHeight="26.0" prefWidth="372.0" text="Strumentazioni" GridPane.columnIndex="1" />
             <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openSpace" prefHeight="26.0" prefWidth="365.0" text="Impianti" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-            <Button mnemonicParsing="false" onAction="#openCard" prefHeight="26.0" prefWidth="370.0" text="Schede" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openCard" prefHeight="26.0" prefWidth="370.0" text="Schede" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openRole" prefHeight="26.0" prefWidth="365.0" text="Ruoli" GridPane.rowIndex="2" />
          </children>
       </GridPane>

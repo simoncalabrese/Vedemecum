@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.SpaceController">
+   <children>
+      <TableView fx:id="table" layoutX="50.0" layoutY="40.0" prefHeight="250.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="101.0" text="ID IMPIANTO" />
+          <TableColumn fx:id="desCol" prefWidth="167.0" text="DESCRIZIONE IMPIANTO" />
+            <TableColumn fx:id="addressCol" prefWidth="166.0" text="INDIRIZZO IMPIANTO" />
+            <TableColumn fx:id="roomCol" prefWidth="142.0" text="#STANZE" />
+            <TableColumn fx:id="doorCol" prefWidth="114.0" text="#PORTE" />
+            <TableColumn fx:id="windowCol" prefWidth="109.0" text="#FINESTRE" />
+        </columns>
+      </TableView>
+      <ButtonBar layoutX="564.0" layoutY="546.0" prefHeight="40.0" prefWidth="286.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#btnDel" text="Cancella" />
+            <Button mnemonicParsing="false" onAction="#btnEdit" text="Modifica" />
+            <Button mnemonicParsing="false" onAction="#btnAdd" text="Aggiungi" />
+        </buttons>
+      </ButtonBar>
+      <Button layoutX="50.0" layoutY="553.0" mnemonicParsing="false" onAction="#btnHome" prefHeight="26.0" prefWidth="74.0" text="Home" />
+   </children>
+</AnchorPane>

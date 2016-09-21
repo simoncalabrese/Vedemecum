@@ -10,16 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d163710-4def-45f3-929f-59a9404e54ec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/api/dto/EmployeeDto.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/api/dto/EmployeeDto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/EmployeeConverter$ToDto.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/EmployeeConverter$ToDto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/EmployeeConverter$ToEntity.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/EmployeeConverter$ToEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/service/EmployeeService.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/service/EmployeeService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/utils/Enumerators$Alert.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/utils/Enumerators$Alert.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/EmployeeController.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/EmployeeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/model/dao/EmployeeDao.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/model/dao/EmployeeDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/model/entity/Employee.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/model/entity/Employee.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/api/dto/SpaceDto.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ejb/converter/SpaceConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ejb/service/SpaceService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/frontend/SpaceController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/frontend/SpaceView.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/EmployeeView.fxml" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/EmployeeView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/HomePage.fxml" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/HomePage.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/HomePage.fxml" afterPath="$PROJECT_DIR$/src/frontend/HomePage.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/dao/SpaceDao.java" afterPath="$PROJECT_DIR$/src/model/dao/SpaceDao.java" />
     </list>
     <ignored path="ProgettoIng.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,15 +42,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/EmployeeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="125" column="13" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
-              <folding>
-                <element signature="e#5937#5938#0" expanded="true" />
-                <element signature="e#6014#6015#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="162">
+              <caret line="204" column="80" selection-start-line="204" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,14 +62,96 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SpaceController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/SpaceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpaceService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ejb/service/SpaceService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+              <folding>
+                <element signature="e#932#933#0" expanded="true" />
+                <element signature="e#1019#1020#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpaceConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ejb/converter/SpaceConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="917">
+              <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpaceDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/dto/SpaceDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="92" column="51" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
+              <folding>
+                <element signature="e#446#447#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
+                <element signature="e#529#530#0" expanded="true" />
+                <element signature="e#559#560#0" expanded="true" />
+                <element signature="e#605#606#0" expanded="true" />
+                <element signature="e#669#670#0" expanded="true" />
+                <element signature="e#704#705#0" expanded="true" />
+                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#789#790#0" expanded="true" />
+                <element signature="e#820#821#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+                <element signature="e#934#935#0" expanded="true" />
+                <element signature="e#973#974#0" expanded="true" />
+                <element signature="e#1014#1015#0" expanded="true" />
+                <element signature="e#1066#1067#0" expanded="true" />
+                <element signature="e#1101#1102#0" expanded="true" />
+                <element signature="e#1157#1158#0" expanded="true" />
+                <element signature="e#1231#1232#0" expanded="true" />
+                <element signature="e#1266#1267#0" expanded="true" />
+                <element signature="e#1303#1304#0" expanded="true" />
+                <element signature="e#1351#1352#0" expanded="true" />
+                <element signature="e#1382#1383#0" expanded="true" />
+                <element signature="e#1430#1431#0" expanded="true" />
+                <element signature="e#1496#1497#0" expanded="true" />
+                <element signature="e#1531#1532#0" expanded="true" />
+                <element signature="e#1568#1569#0" expanded="true" />
+                <element signature="e#1616#1617#0" expanded="true" />
+                <element signature="e#1647#1648#0" expanded="true" />
+                <element signature="e#1695#1696#0" expanded="true" />
+                <element signature="e#1761#1762#0" expanded="true" />
+                <element signature="e#1798#1799#0" expanded="true" />
+                <element signature="e#1837#1838#0" expanded="true" />
+                <element signature="e#1887#1888#0" expanded="true" />
+                <element signature="e#1920#1921#0" expanded="true" />
+                <element signature="e#1972#1973#0" expanded="true" />
+                <element signature="e#2042#2043#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -106,7 +186,6 @@
         <option value="$PROJECT_DIR$/src/frontend/EmployeeView.fxml" />
         <option value="$PROJECT_DIR$/src/frontend/HomePageController.java" />
         <option value="$PROJECT_DIR$/src/ejb/converter/RoleConverter.java" />
-        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/model/entity/Role.java" />
         <option value="$PROJECT_DIR$/src/api/dto/RoleDto.java" />
         <option value="$PROJECT_DIR$/src/ejb/utils/UtilValue.java" />
@@ -131,6 +210,13 @@
         <option value="$PROJECT_DIR$/src/frontend/RoleController.java" />
         <option value="$PROJECT_DIR$/src/ejb/service/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/frontend/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/frontend/SpaceView.fxml" />
+        <option value="$PROJECT_DIR$/src/api/dto/SpaceDto.java" />
+        <option value="$PROJECT_DIR$/src/frontend/SpaceController.java" />
+        <option value="$PROJECT_DIR$/src/ejb/converter/SpaceConverter.java" />
+        <option value="$PROJECT_DIR$/src/ejb/service/SpaceService.java" />
+        <option value="$PROJECT_DIR$/src/model/dao/SpaceDao.java" />
       </list>
     </option>
   </component>
@@ -174,6 +260,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -205,8 +292,22 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="Vedemecum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vedemecum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ejb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -223,6 +324,14 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ejb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -238,15 +347,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
+              <option name="myItemId" value="ejb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="converter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vedemecum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vedemecum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vedemecum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vedemecum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dto" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,26 +412,27 @@
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="progettoing" />
-    <property name="SearchEverywhereHistoryKey" value="rolecontr&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/RoleController.java&#10;roleda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/RoleDao.java&#10;Employee&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;super&#9;PSI&#9;JAVA://ejb.converter.SuperConverter&#10;EmployeeDt&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/api/dto/EmployeeDto.java&#10;roledto&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/api/dto/RoleDto.java&#10;utilda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/utils/UtilDate.java&#10;roledao&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/RoleDao.java&#10;employeeser&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/EmployeeService.java&#10;roles&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/RoleService.java&#10;emplo&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;Dis&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/Dispatcher/ViewDispatcher.java&#10;pers&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/META-INF/persistence.xml" />
+    <property name="SearchEverywhereHistoryKey" value="Employeeda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/EmployeeDao.java&#10;employeeser&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/EmployeeService.java&#10;employeecon&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;rolecontr&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/RoleController.java&#10;roleda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/RoleDao.java&#10;Employee&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;super&#9;PSI&#9;JAVA://ejb.converter.SuperConverter&#10;EmployeeDt&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/api/dto/EmployeeDto.java&#10;roledto&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/api/dto/RoleDto.java&#10;utilda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/utils/UtilDate.java&#10;roledao&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/RoleDao.java&#10;roles&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/RoleService.java&#10;emplo&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;Dis&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/Dispatcher/ViewDispatcher.java&#10;pers&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/META-INF/persistence.xml" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="frontend" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ejb.converter" />
-      <recent name="ejb.service" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/frontend" />
       <recent name="$PROJECT_DIR$/src/frontend/viewAndController" />
       <recent name="$PROJECT_DIR$/src/frontend/controller/gui" />
       <recent name="$PROJECT_DIR$/src/frontend/controller" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="frontend" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ejb.converter" />
+      <recent name="ejb.service" />
+      <recent name="api.dto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MainClass">
@@ -726,7 +879,14 @@
       <option name="project" value="LOCAL" />
       <updated>1474388012533</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix data">
+      <created>1474394252015</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1474394252015</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -750,11 +910,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35157546" sideWeight="0.538695" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965213" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32669982" sideWeight="0.49603623" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35157546" sideWeight="0.46130502" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35157546" sideWeight="0.46130502" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24212272" sideWeight="0.49150622" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22685888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.215478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958587" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51138085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -814,7 +974,8 @@
     <MESSAGE value="fix converter function" />
     <MESSAGE value="add employee" />
     <MESSAGE value="completed employee" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed employee" />
+    <MESSAGE value="fix data" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -830,65 +991,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/frontend/HomePage.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="31" column="85" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/EmployeeView.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/jd2/jre/lib/ext/jfxrt.jar!/javafx/fxml/FXMLLoader.class" />
-    <entry file="file://$PROJECT_DIR$/src/frontend/LoginView.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/RoleView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="12" column="100" selection-start-line="12" selection-start-column="91" selection-end-line="12" selection-end-column="100" />
         </state>
       </provider>
     </entry>
@@ -1040,7 +1149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="1948" column="0" selection-start-line="1948" selection-start-column="0" selection-end-line="1948" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,7 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,10 +1174,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="303" column="40" selection-start-line="303" selection-start-column="40" selection-end-line="303" selection-end-column="40" />
-          <folding>
-            <element signature="e#11614#11615#0" expanded="false" />
-            <element signature="e#11668#11669#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1078,7 +1181,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
           <caret line="22" column="87" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,7 +1188,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,7 +1195,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,7 +1210,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="635">
           <caret line="1772" column="0" selection-start-line="1772" selection-start-column="0" selection-end-line="1772" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,60 +1218,60 @@
         <state relative-caret-position="197">
           <caret line="152" column="45" selection-start-line="152" selection-start-column="45" selection-end-line="152" selection-end-column="45" />
           <folding>
-            <element signature="e#672#673#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#1007#1008#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1098#1099#0" expanded="true" />
-            <element signature="e#1280#1281#0" expanded="true" />
-            <element signature="e#1326#1327#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
-            <element signature="e#1423#1424#0" expanded="true" />
-            <element signature="e#1615#1616#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1752#1753#0" expanded="true" />
-            <element signature="e#1930#1931#0" expanded="true" />
-            <element signature="e#1968#1969#0" expanded="true" />
-            <element signature="e#2017#2018#0" expanded="true" />
-            <element signature="e#2049#2050#0" expanded="true" />
-            <element signature="e#2099#2100#0" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
-            <element signature="e#2204#2205#0" expanded="true" />
-            <element signature="e#2243#2244#0" expanded="true" />
-            <element signature="e#2293#2294#0" expanded="true" />
-            <element signature="e#2326#2327#0" expanded="true" />
-            <element signature="e#2378#2379#0" expanded="true" />
-            <element signature="e#2448#2449#0" expanded="true" />
-            <element signature="e#2484#2485#0" expanded="true" />
-            <element signature="e#2522#2523#0" expanded="true" />
-            <element signature="e#2571#2572#0" expanded="true" />
-            <element signature="e#2603#2604#0" expanded="true" />
-            <element signature="e#2653#2654#0" expanded="true" />
-            <element signature="e#2721#2722#0" expanded="true" />
-            <element signature="e#2753#2754#0" expanded="true" />
-            <element signature="e#2787#2788#0" expanded="true" />
-            <element signature="e#2832#2833#0" expanded="true" />
-            <element signature="e#2860#2861#0" expanded="true" />
-            <element signature="e#2902#2903#0" expanded="true" />
-            <element signature="e#2962#2963#0" expanded="true" />
-            <element signature="e#2996#2997#0" expanded="true" />
-            <element signature="e#3032#3033#0" expanded="true" />
-            <element signature="e#3079#3080#0" expanded="true" />
-            <element signature="e#3109#3110#0" expanded="true" />
-            <element signature="e#3155#3156#0" expanded="true" />
-            <element signature="e#3219#3220#0" expanded="true" />
-            <element signature="e#3250#3251#0" expanded="true" />
-            <element signature="e#3283#3284#0" expanded="true" />
-            <element signature="e#3327#3328#0" expanded="true" />
-            <element signature="e#3354#3355#0" expanded="true" />
-            <element signature="e#3394#3395#0" expanded="true" />
-            <element signature="e#3452#3453#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="false" />
+            <element signature="e#712#713#0" expanded="false" />
+            <element signature="e#763#764#0" expanded="false" />
+            <element signature="e#797#798#0" expanded="false" />
+            <element signature="e#851#852#0" expanded="false" />
+            <element signature="e#923#924#0" expanded="false" />
+            <element signature="e#964#965#0" expanded="false" />
+            <element signature="e#1007#1008#0" expanded="false" />
+            <element signature="e#1061#1062#0" expanded="false" />
+            <element signature="e#1098#1099#0" expanded="false" />
+            <element signature="e#1280#1281#0" expanded="false" />
+            <element signature="e#1326#1327#0" expanded="false" />
+            <element signature="e#1383#1384#0" expanded="false" />
+            <element signature="e#1423#1424#0" expanded="false" />
+            <element signature="e#1615#1616#0" expanded="false" />
+            <element signature="e#1659#1660#0" expanded="false" />
+            <element signature="e#1714#1715#0" expanded="false" />
+            <element signature="e#1752#1753#0" expanded="false" />
+            <element signature="e#1930#1931#0" expanded="false" />
+            <element signature="e#1968#1969#0" expanded="false" />
+            <element signature="e#2017#2018#0" expanded="false" />
+            <element signature="e#2049#2050#0" expanded="false" />
+            <element signature="e#2099#2100#0" expanded="false" />
+            <element signature="e#2167#2168#0" expanded="false" />
+            <element signature="e#2204#2205#0" expanded="false" />
+            <element signature="e#2243#2244#0" expanded="false" />
+            <element signature="e#2293#2294#0" expanded="false" />
+            <element signature="e#2326#2327#0" expanded="false" />
+            <element signature="e#2378#2379#0" expanded="false" />
+            <element signature="e#2448#2449#0" expanded="false" />
+            <element signature="e#2484#2485#0" expanded="false" />
+            <element signature="e#2522#2523#0" expanded="false" />
+            <element signature="e#2571#2572#0" expanded="false" />
+            <element signature="e#2603#2604#0" expanded="false" />
+            <element signature="e#2653#2654#0" expanded="false" />
+            <element signature="e#2721#2722#0" expanded="false" />
+            <element signature="e#2753#2754#0" expanded="false" />
+            <element signature="e#2787#2788#0" expanded="false" />
+            <element signature="e#2832#2833#0" expanded="false" />
+            <element signature="e#2860#2861#0" expanded="false" />
+            <element signature="e#2902#2903#0" expanded="false" />
+            <element signature="e#2962#2963#0" expanded="false" />
+            <element signature="e#2996#2997#0" expanded="false" />
+            <element signature="e#3032#3033#0" expanded="false" />
+            <element signature="e#3079#3080#0" expanded="false" />
+            <element signature="e#3109#3110#0" expanded="false" />
+            <element signature="e#3155#3156#0" expanded="false" />
+            <element signature="e#3219#3220#0" expanded="false" />
+            <element signature="e#3250#3251#0" expanded="false" />
+            <element signature="e#3283#3284#0" expanded="false" />
+            <element signature="e#3327#3328#0" expanded="false" />
+            <element signature="e#3354#3355#0" expanded="false" />
+            <element signature="e#3394#3395#0" expanded="false" />
+            <element signature="e#3452#3453#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1189,17 +1288,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/dao/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="47" column="66" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1208,16 +1296,8 @@
         <state relative-caret-position="107">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ejb/converter/EmployeeConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1225,7 +1305,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11">
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1233,14 +1312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="31" column="99" selection-start-line="31" selection-start-column="99" selection-end-line="31" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ejb/service/EmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="48" column="86" selection-start-line="48" selection-start-column="86" selection-end-line="48" selection-end-column="86" />
           <folding />
         </state>
       </provider>
@@ -1253,13 +1324,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="14" column="72" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/dto/SpaceDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="92" column="51" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
+          <folding>
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1066#1067#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+            <element signature="e#1231#1232#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
+            <element signature="e#1351#1352#0" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+            <element signature="e#1496#1497#0" expanded="true" />
+            <element signature="e#1531#1532#0" expanded="true" />
+            <element signature="e#1568#1569#0" expanded="true" />
+            <element signature="e#1616#1617#0" expanded="true" />
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#1695#1696#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1798#1799#0" expanded="true" />
+            <element signature="e#1837#1838#0" expanded="true" />
+            <element signature="e#1887#1888#0" expanded="true" />
+            <element signature="e#1920#1921#0" expanded="true" />
+            <element signature="e#1972#1973#0" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/SpaceView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/EmployeeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="125" column="13" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+        <state relative-caret-position="162">
+          <caret line="204" column="80" selection-start-line="204" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ejb/converter/EmployeeConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/SpaceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
-            <element signature="e#5937#5938#0" expanded="true" />
-            <element signature="e#6014#6015#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ejb/service/EmployeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="48" column="86" selection-start-line="48" selection-start-column="86" selection-end-line="48" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ejb/converter/SpaceConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="917">
+          <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/dao/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="47" column="66" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/dao/SpaceDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ejb/service/SpaceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="e#932#933#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
           </folding>
         </state>
       </provider>
