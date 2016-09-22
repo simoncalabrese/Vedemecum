@@ -2,11 +2,12 @@ package frontend;
 
 import api.dto.StrumentationDto;
 import ejb.service.StrumentationService;
+import ejb.utils.Enumerators;
+import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 
 import java.util.List;
 
@@ -15,6 +16,8 @@ import java.util.List;
  */
 public class StrumentationController {
     StrumentationService strumentationService = new StrumentationService();
+    ViewDispatcher dispatcher = ViewDispatcher.getDispatcher();
+
 
     @FXML
     private TableView<StrumentationDto> table;
@@ -38,6 +41,24 @@ public class StrumentationController {
     private TableColumn<StrumentationDto, String> dtCol;
 
     @FXML
+    private Label idLabel;
+
+    @FXML
+    private TextField desText;
+
+    @FXML
+    private TextField modelText;
+
+    @FXML
+    private TextField marcText;
+
+    @FXML
+    private TextField totText;
+
+    @FXML
+    private DatePicker date;
+
+    @FXML
     void btnAdd() {
 
     }
@@ -54,7 +75,7 @@ public class StrumentationController {
 
     @FXML
     void btnHome() {
-
+        dispatcher.dispatch(Enumerators.viewsPath.HOMEPAGE.getPath());
     }
 
     @FXML

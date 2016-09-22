@@ -2,10 +2,15 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.StrumentationController">
    <children>
@@ -27,5 +32,32 @@
         </buttons>
       </ButtonBar>
       <Button layoutX="28.0" layoutY="553.0" mnemonicParsing="false" onAction="#btnHome" prefHeight="26.0" prefWidth="85.0" text="Home" />
+      <GridPane layoutX="84.0" layoutY="396.0" prefHeight="90.0" prefWidth="800.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="16.0" prefWidth="196.0" text="ID Strumentazione" />
+            <Label prefHeight="16.0" prefWidth="196.0" text="Descrizione" GridPane.rowIndex="1" />
+            <Label prefHeight="16.0" prefWidth="196.0" text="Modello" GridPane.rowIndex="2" />
+            <Label prefHeight="16.0" prefWidth="196.0" text="Marca" GridPane.columnIndex="2" />
+            <Label prefHeight="16.0" prefWidth="196.0" text="Pezzi" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label prefHeight="16.0" prefWidth="196.0" text="Data di acquisto" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label prefHeight="16.0" prefWidth="196.0" GridPane.columnIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField GridPane.columnIndex="3" />
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <DatePicker GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
    </children>
 </AnchorPane>
