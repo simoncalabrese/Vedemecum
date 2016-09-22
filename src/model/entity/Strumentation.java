@@ -1,7 +1,7 @@
 package model.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -13,6 +13,7 @@ import java.util.List;
 )
 public class Strumentation {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(
             name = "ID_STRUMENTAZIONE",
             nullable = false
@@ -46,7 +47,7 @@ public class Strumentation {
     @Column(
             name = "DT_ACQUISTO"
     )
-    private Date dtAcquisto;
+    private LocalDate dtAcquisto;
 
     @OneToMany(
             mappedBy = "strumentation"
@@ -98,11 +99,11 @@ public class Strumentation {
         this.pezzi = pezzi;
     }
 
-    public Date getDtAcquisto() {
+    public LocalDate getDtAcquisto() {
         return dtAcquisto;
     }
 
-    public void setDtAcquisto(Date dtAcquisto) {
+    public void setDtAcquisto(LocalDate dtAcquisto) {
         this.dtAcquisto = dtAcquisto;
     }
 
