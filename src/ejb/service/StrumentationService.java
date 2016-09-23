@@ -31,15 +31,16 @@ public class StrumentationService extends BaseService<StrumentationDao> {
     }
 
     public Boolean insertStrumentation(StrumentationDto strumentationDto) {
-        return null;
+        strumentationDto.setIdStrumentazione(null);
+        return getDao().insertStrumentazione(converter(strumentationDto, StrumentationConverter.ToEntity.toStrumentationEntity));
     }
 
     public Boolean updateStrumentation(StrumentationDto strumentationDto) {
-        return null;
+        return getDao().modificaStrumentazione(converter(strumentationDto,StrumentationConverter.ToEntity.toStrumentationEntity));
     }
 
     public Boolean deleteStrumentation(Integer id) {
-        return null;
+        return getDao().deleteStrumentation(id);
     }
 
     public List<StrumentationDto> getAllStrumentation() {

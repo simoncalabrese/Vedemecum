@@ -9,18 +9,18 @@ import java.util.List;
  */
 public class StrumentationDao extends BaseDaoImplementation {
 
-    public void insertStrumentazione(Strumentation strumentation) {
-        insert(strumentation);
+    public Boolean insertStrumentazione(Strumentation strumentation) {
+        return insert(strumentation);
 
     }
 
-    public void modificaStrumentazione(Strumentation strumentation) {
-        update(strumentation);
+    public Boolean modificaStrumentazione(Strumentation strumentation) {
+        return update(strumentation);
 
     }
 
-    public void deleteStrumentation(Integer id) {
-        delete(findStrumentation(id));
+    public Boolean deleteStrumentation(Integer id) {
+        return delete(findStrumentation(id));
 
     }
 

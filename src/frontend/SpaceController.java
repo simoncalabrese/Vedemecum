@@ -3,6 +3,7 @@ package frontend;
 
 
 import api.dto.SpaceDto;
+import com.sun.org.apache.bcel.internal.generic.LADD;
 import ejb.service.SpaceService;
 import ejb.utils.Enumerators;
 import ejb.utils.UtilDate;
@@ -11,6 +12,7 @@ import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -38,7 +40,7 @@ public class SpaceController {
     private TableColumn<SpaceDto, String> windowCol;
 
     @FXML
-    private TextField idText;
+    private Label idText;
 
     @FXML
     private TextField desText;
@@ -72,29 +74,33 @@ public class SpaceController {
 
     @FXML
     void btnDel() {
-        if (table.getSelectionModel().getSelectedIndex() >= 0) {
-            if (spaceService.deleteSpace(
-                    Integer.valueOf(table.getItems()
-                            .get(table.getSelectionModel().getSelectedIndex())
-                            .getIdSpace()))) {
+        if (UtilValue.isNumeric(idText.getText(), Integer::valueOf)) {
+            if (spaceService.deleteSpace(Integer.valueOf(idText.getText()))) {
                 populateTable();
             } else {
-                dispatcher.alert(Enumerators.Alert.DELETE, "Dipendenti");
+                dispatcher.alert(Enumerators.Alert.DELETE, "Impianti");
             }
+        }else {
+            dispatcher.alert(Enumerators.Alert.SELECTIONROW, null);
         }
     }
 
     @FXML
     void btnEdit() {
-        SpaceDto spaceDto = validDto();
-        if (spaceDto != null) {
-            if (spaceService.upadteSpace(spaceDto)) {
-                populateTable();
+        if (UtilValue.isNumeric(idText.getText(),Integer::valueOf)) {
+            SpaceDto spaceDto = validDto();
+            if (spaceDto != null) {
+                if (spaceService.upadteSpace(spaceDto)) {
+                    populateTable();
+                    cleanText();
+                } else {
+                    dispatcher.alert(Enumerators.Alert.UPDATE, "Impianti");
+                }
             } else {
-                dispatcher.alert(Enumerators.Alert.UPDATE, "Impianti");
+                dispatcher.alert(Enumerators.Alert.VALUES, null);
             }
         } else {
-            dispatcher.alert(Enumerators.Alert.VALUES, null);
+            dispatcher.alert(Enumerators.Alert.SELECTIONROW, null);
         }
     }
 
@@ -109,20 +115,32 @@ public class SpaceController {
         if (table.getSelectionModel().getSelectedIndex() >= 0) {
             SpaceDto spaceDto = table.getItems().get(table.getSelectionModel().getSelectedIndex());
             idText.setText(spaceDto.getIdSpace());
-            idText.setEditable(false);
             desText.setText(spaceDto.getDesSpace());
             addressText.setText(spaceDto.getAddressSpace());
             roomText.setText(spaceDto.getAmntRoom());
             doorText.setText(spaceDto.getAmntDoor());
             windowText.setText(spaceDto.getAmntWindow());
+            table.getSelectionModel().clearSelection();
         } else {
-            dispatcher.alert(Enumerators.Alert.SELECTIONROW, null);
+            if (UtilValue.isNumeric(idText.getText(), Integer::valueOf)) {
+                cleanText();
+            }
         }
+    }
+
+    private void cleanText() {
+        idText.setText("");
+        desText.setText("");
+        addressText.setText("");
+        roomText.setText("");
+        doorText.setText("");
+        windowText.setText("");
     }
 
 
     @FXML
     void initialize() {
+        idText.setVisible(false);
         idCol.setCellValueFactory(param -> param.getValue().idSpaceProperty());
         desCol.setCellValueFactory(param -> param.getValue().desSpaceProperty());
         addressCol.setCellValueFactory(param -> param.getValue().addressSpaceProperty());
@@ -142,12 +160,9 @@ public class SpaceController {
 
     private SpaceDto validDto() {
         SpaceDto spaceDto = new SpaceDto();
-        if (UtilValue.isNumeric(idText.getText(), Integer::valueOf)) {
-            spaceDto.setIdSpace(idText.getText());
-        } else {
-            dispatcher.alert(Enumerators.Alert.VALUESNOTVALID, "id");
-            return null;
-        }
+        spaceDto.setIdSpace(UtilValue.isNumeric(idText.getText(), Integer::valueOf)
+                ? idText.getText()
+                : null);
         spaceDto.setDesSpace(desText.getText() != ""
                 ? desText.getText().toUpperCase()
                 : "");

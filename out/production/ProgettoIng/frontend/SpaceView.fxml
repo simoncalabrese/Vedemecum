@@ -50,12 +50,12 @@
             <Label text="Numero Stanze" GridPane.columnIndex="2" />
             <Label text="Numero Porte" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Label text="Numero Finestre" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <TextField fx:id="idText" GridPane.columnIndex="1" />
             <TextField fx:id="desText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="addressText" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="roomText" GridPane.columnIndex="3" />
             <TextField fx:id="doorText" GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <TextField fx:id="windowText" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="idText" prefHeight="16.0" prefWidth="185.0" GridPane.columnIndex="1" />
          </children>
       </GridPane>
    </children>

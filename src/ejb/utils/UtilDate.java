@@ -16,7 +16,6 @@ public class UtilDate {
     }
 
     public static LocalDate toDate(final String date) {
-        System.out.println(date);
         return date.equals("") ? null : LocalDate.parse(date);
     }
 }
