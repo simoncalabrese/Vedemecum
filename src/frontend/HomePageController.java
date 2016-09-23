@@ -30,6 +30,11 @@ public class HomePageController {
     }
 
     @FXML
+    void openAssociation() {
+        dispatcher.dispatch(Enumerators.viewsPath.ASSOCIATION.getPath());
+    }
+
+    @FXML
     void openEmployee() {
         dispatcher.dispatch(Enumerators.viewsPath.EMPLOYEE.getPath());
 

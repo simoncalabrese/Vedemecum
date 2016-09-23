@@ -16,12 +16,12 @@
    <children>
       <TableView fx:id="table" layoutX="81.0" layoutY="30.0" prefHeight="300.0" prefWidth="800.0">
         <columns>
-          <TableColumn fx:id="idCol" prefWidth="120.0" text="C1" />
-          <TableColumn fx:id="desCol" minWidth="6.0" prefWidth="160.0" text="C2" />
-            <TableColumn fx:id="modelCol" prefWidth="128.0" text="C2" />
-            <TableColumn fx:id="marcCol" prefWidth="142.0" text="C2" />
-            <TableColumn fx:id="totCol" prefWidth="105.0" text="C2" />
-            <TableColumn fx:id="dtCol" prefWidth="144.0" text="C2" />
+          <TableColumn fx:id="idCol" prefWidth="83.0" text="ID" />
+          <TableColumn fx:id="desCol" minWidth="6.0" prefWidth="197.0" text="Descrizione" />
+            <TableColumn fx:id="modelCol" prefWidth="128.0" text="Modello" />
+            <TableColumn fx:id="marcCol" prefWidth="142.0" text="Marca" />
+            <TableColumn fx:id="totCol" prefWidth="105.0" text="Pezzi" />
+            <TableColumn fx:id="dtCol" prefWidth="144.0" text="Data Di acquisto" />
         </columns>
       </TableView>
       <ButtonBar layoutX="575.0" layoutY="546.0" prefHeight="40.0" prefWidth="306.0">

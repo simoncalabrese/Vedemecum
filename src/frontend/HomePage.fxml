@@ -23,8 +23,9 @@
             <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openEmployee" prefHeight="26.0" prefWidth="370.0" text="Dipendenti" />
             <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openStrumentation" prefHeight="26.0" prefWidth="372.0" text="Strumentazioni" GridPane.columnIndex="1" />
             <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openSpace" prefHeight="26.0" prefWidth="365.0" text="Impianti" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openCard" prefHeight="26.0" prefWidth="370.0" text="Schede" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openCard" prefHeight="26.0" prefWidth="370.0" text="Schede" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openRole" prefHeight="26.0" prefWidth="365.0" text="Ruoli" GridPane.rowIndex="2" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openAssociation" prefHeight="26.0" prefWidth="370.0" text="Associazioni Dipendenti" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
       <Button layoutX="804.0" layoutY="28.0" mnemonicParsing="false" onAction="#btnLogout" prefHeight="39.0" prefWidth="76.0" text="Logout" AnchorPane.bottomAnchor="533.0" AnchorPane.leftAnchor="804.0" />

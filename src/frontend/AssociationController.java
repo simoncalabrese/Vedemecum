@@ -10,6 +10,8 @@ import api.dto.StrumentationDto;
 import ejb.service.EmployeeService;
 import ejb.service.SpaceService;
 import ejb.service.StrumentationService;
+import ejb.utils.Enumerators;
+import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -24,6 +26,7 @@ public class AssociationController {
     private final EmployeeService employeeService = new EmployeeService();
     private final SpaceService spaceService = new SpaceService();
     private final StrumentationService strumentationService = new StrumentationService();
+    private final ViewDispatcher dispatcher = ViewDispatcher.getDispatcher();
     @FXML
     private ResourceBundle resources;
 
@@ -95,7 +98,11 @@ public class AssociationController {
 
     @FXML
     void btnAssoc(ActionEvent event) {
+    }
 
+    @FXML
+    void btnHome() {
+        dispatcher.dispatch(Enumerators.viewsPath.HOMEPAGE.getPath());
     }
 
     @FXML
@@ -120,8 +127,8 @@ public class AssociationController {
     }
 
     private void inizializeTable() {
-        idEmp.setCellValueFactory(param ->  param.getValue().idDipedenteProperty());
-        surnameEmp.setCellValueFactory(param ->  param.getValue().cognomeDipendenteProperty());
+        idEmp.setCellValueFactory(param -> param.getValue().idDipedenteProperty());
+        surnameEmp.setCellValueFactory(param -> param.getValue().cognomeDipendenteProperty());
         nameEmp.setCellValueFactory(param -> param.getValue().nomeDipendenteProperty());
         cfEmp.setCellValueFactory(param -> param.getValue().codFiscaleProperty());
         isSpace.setCellValueFactory(param -> param.getValue().idSpaceProperty());
