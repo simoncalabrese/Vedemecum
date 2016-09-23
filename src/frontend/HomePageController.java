@@ -48,7 +48,7 @@ public class HomePageController {
 
     @FXML
     void openStrumentation(ActionEvent event) {
-
+        dispatcher.dispatch(Enumerators.viewsPath.STRUMENTATION.getPath());
     }
 
 }
