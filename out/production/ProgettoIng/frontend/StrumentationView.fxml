@@ -51,12 +51,12 @@
             <Label prefHeight="16.0" prefWidth="196.0" text="Marca" GridPane.columnIndex="2" />
             <Label prefHeight="16.0" prefWidth="196.0" text="Pezzi" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Label prefHeight="16.0" prefWidth="196.0" text="Data di acquisto" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Label prefHeight="16.0" prefWidth="196.0" GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="3" />
-            <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <DatePicker GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="idLabel" prefHeight="16.0" prefWidth="196.0" GridPane.columnIndex="1" />
+            <TextField fx:id="desText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="modelText" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="marcText" GridPane.columnIndex="3" />
+            <TextField fx:id="totText" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <DatePicker fx:id="date" GridPane.columnIndex="3" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>

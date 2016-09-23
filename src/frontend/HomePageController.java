@@ -19,29 +19,29 @@ public class HomePageController {
     private Label userText;
 
     @FXML
-    void btnLogout(ActionEvent event) {
+    void btnLogout() {
         dispatcher.dispatch(Enumerators.viewsPath.LOGIN.getPath());
 
     }
 
     @FXML
-    void openCard(ActionEvent event) {
+    void openCard() {
 
     }
 
     @FXML
-    void openEmployee(ActionEvent event) {
+    void openEmployee() {
         dispatcher.dispatch(Enumerators.viewsPath.EMPLOYEE.getPath());
 
     }
 
     @FXML
-    void openRole(ActionEvent event) {
+    void openRole() {
         dispatcher.dispatch(Enumerators.viewsPath.ROLE.getPath());
     }
 
     @FXML
-    void openSpace(ActionEvent event) {
+    void openSpace() {
         dispatcher.dispatch(Enumerators.viewsPath.SPACE.getPath());
 
     }

@@ -10,14 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d163710-4def-45f3-929f-59a9404e54ec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/utils/Enumerators$Alert.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/utils/Enumerators$Alert.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/utils/Enumerators$viewsPath.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/utils/Enumerators$viewsPath.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/HomePageController.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/HomePageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/model/entity/Strumentation.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/model/entity/Strumentation.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/frontend/AssociationController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ejb/utils/Enumerators.java" afterPath="$PROJECT_DIR$/src/ejb/utils/Enumerators.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/EmployeeView.fxml" afterPath="$PROJECT_DIR$/src/frontend/EmployeeView.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/HomePageController.java" afterPath="$PROJECT_DIR$/src/frontend/HomePageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/StrumentationView.fxml" afterPath="$PROJECT_DIR$/src/frontend/StrumentationView.fxml" />
     </list>
     <ignored path="ProgettoIng.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,19 +38,12 @@
       <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/EmployeeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2772">
-              <caret line="175" column="69" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StrumentationService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ejb/service/StrumentationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
-              <folding />
+            <state relative-caret-position="569">
+              <caret line="204" column="8" selection-start-line="204" selection-start-column="8" selection-end-line="207" selection-end-column="30" />
+              <folding>
+                <element signature="e#5937#5938#0" expanded="true" />
+                <element signature="e#6014#6015#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,32 +51,34 @@
       <file leaf-file-name="StrumentationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/StrumentationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1206">
-              <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Enumerators.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ejb/utils/Enumerators.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomePageController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/frontend/HomePageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+            <state relative-caret-position="281">
+              <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="95" selection-end-column="30" />
               <folding>
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1078#1079#0" expanded="true" />
+                <element signature="e#1417#1418#0" expanded="true" />
+                <element signature="e#1494#1495#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssociationController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/frontend/AssociationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="132" column="80" selection-start-line="132" selection-start-column="80" selection-end-line="132" selection-end-column="80" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpaceController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/SpaceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="136" column="8" selection-start-line="136" selection-start-column="8" selection-end-line="139" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,7 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/frontend/controller/RoleController.java" />
         <option value="$PROJECT_DIR$/src/frontend/controller/gui/RoleController.java" />
         <option value="$PROJECT_DIR$/src/frontend/Root.fxml" />
         <option value="$PROJECT_DIR$/META_INF/persistence.xml" />
@@ -170,6 +160,7 @@
         <option value="$PROJECT_DIR$/src/frontend/StrumentationController.java" />
         <option value="$PROJECT_DIR$/src/ejb/utils/Enumerators.java" />
         <option value="$PROJECT_DIR$/src/frontend/HomePageController.java" />
+        <option value="$PROJECT_DIR$/src/frontend/AssociationController.java" />
       </list>
     </option>
   </component>
@@ -213,8 +204,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -266,44 +255,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vedemecum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vedemecum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ejb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vedemecum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vedemecum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,27 +272,27 @@
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="progettoing" />
-    <property name="SearchEverywhereHistoryKey" value="Homecontr&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/HomePageController.java&#10;Enumerat&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/utils/Enumerators.java&#10;Empl&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Strum&#9;PSI&#9;JAVA://model.entity.Strumentation&#10;Em&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;employee&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;Space&#9;PSI&#9;JAVA://model.entity.Space&#10;employeecon&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Employeeda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/EmployeeDao.java&#10;employeeser&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/EmployeeService.java&#10;rolecontr&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/RoleController.java&#10;roleda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/RoleDao.java&#10;Employee&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;super&#9;PSI&#9;JAVA://ejb.converter.SuperConverter&#10;EmployeeDt&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/api/dto/EmployeeDto.java&#10;roledto&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/api/dto/RoleDto.java&#10;utilda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/utils/UtilDate.java&#10;roledao&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/RoleDao.java&#10;roles&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/RoleService.java&#10;emplo&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;Dis&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/Dispatcher/ViewDispatcher.java&#10;pers&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/META-INF/persistence.xml" />
+    <property name="SearchEverywhereHistoryKey" value="EmployeeC&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Spacec&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/SpaceController.java&#10;Homecontr&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/HomePageController.java&#10;Enumerat&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/utils/Enumerators.java&#10;Empl&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Strum&#9;PSI&#9;JAVA://model.entity.Strumentation&#10;Em&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;employee&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;Space&#9;PSI&#9;JAVA://model.entity.Space&#10;employeecon&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Employeeda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/EmployeeDao.java&#10;employeeser&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/EmployeeService.java&#10;rolecontr&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/RoleController.java&#10;roleda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/RoleDao.java&#10;Employee&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;super&#9;PSI&#9;JAVA://ejb.converter.SuperConverter&#10;EmployeeDt&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/api/dto/EmployeeDto.java&#10;roledto&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/api/dto/RoleDto.java&#10;utilda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/utils/UtilDate.java&#10;roledao&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/RoleDao.java&#10;roles&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/RoleService.java&#10;emplo&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;Dis&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/Dispatcher/ViewDispatcher.java&#10;pers&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/META-INF/persistence.xml" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="frontend" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ejb.converter" />
-      <recent name="api.dto" />
-      <recent name="ejb.service" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/frontend" />
       <recent name="$PROJECT_DIR$/src/frontend/viewAndController" />
       <recent name="$PROJECT_DIR$/src/frontend/controller/gui" />
       <recent name="$PROJECT_DIR$/src/frontend/controller" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="frontend" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ejb.converter" />
+      <recent name="api.dto" />
+      <recent name="ejb.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MainClass">
@@ -840,32 +795,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32669982" sideWeight="0.46965098" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35157546" sideWeight="0.538695" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965213" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32669982" sideWeight="0.49603623" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35157546" sideWeight="0.46130502" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24212272" sideWeight="0.49150622" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.215478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.215478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886191" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51138085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47097844" sideWeight="0.4826063" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32669982" sideWeight="0.46965098" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35157546" sideWeight="0.46130502" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.49806738" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47097844" sideWeight="0.4826063" order="4" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -934,14 +889,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/entity/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/metamodel/model/entity/Card_.java" />
     <entry file="file://$PROJECT_DIR$/src/model/entity/Sdsi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -1166,13 +1113,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/SpaceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ejb/service/SpaceService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -1247,27 +1187,23 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2772">
-          <caret line="175" column="69" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ejb/service/StrumentationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/StrumentationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1206">
-          <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#688#689#0" expanded="false" />
+            <element signature="e#749#750#0" expanded="false" />
+            <element signature="e#802#803#0" expanded="false" />
+            <element signature="e#879#880#0" expanded="false" />
+            <element signature="e#906#907#0" expanded="false" />
+            <element signature="e#983#984#0" expanded="false" />
+            <element signature="e#1010#1011#0" expanded="false" />
+            <element signature="e#1064#1065#0" expanded="false" />
+            <element signature="e#1091#1092#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1275,17 +1211,77 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+          <folding>
+            <element signature="e#454#455#0" expanded="false" />
+            <element signature="e#494#495#0" expanded="false" />
+            <element signature="e#529#530#0" expanded="false" />
+            <element signature="e#564#565#0" expanded="false" />
+            <element signature="e#1644#1645#0" expanded="false" />
+            <element signature="e#1679#1680#0" expanded="false" />
+            <element signature="e#1714#1715#0" expanded="false" />
+            <element signature="e#1749#1750#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/AssociationView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/HomePageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+        <state relative-caret-position="216">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#993#994#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/SpaceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="136" column="8" selection-start-line="136" selection-start-column="8" selection-end-line="139" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="204" column="8" selection-start-line="204" selection-start-column="8" selection-end-line="207" selection-end-column="30" />
+          <folding>
+            <element signature="e#5937#5938#0" expanded="true" />
+            <element signature="e#6014#6015#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/StrumentationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="95" selection-end-column="30" />
+          <folding>
+            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/AssociationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="132" column="80" selection-start-line="132" selection-start-column="80" selection-end-line="132" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
