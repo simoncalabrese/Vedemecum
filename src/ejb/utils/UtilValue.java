@@ -22,4 +22,8 @@ public class UtilValue {
                 ? null
                 : convert.apply(value);
     }
+
+    public static Boolean isValidString(String value) {
+        return !(value == null || value.equals(""));
+    }
 }

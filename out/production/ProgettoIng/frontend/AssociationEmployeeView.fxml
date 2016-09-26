@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.AssociationController">
     <children>
-        <TableView fx:id="tableEmployee" layoutX="254.0" layoutY="237.0" prefHeight="200.0" prefWidth="448.0">
+        <TableView fx:id="tableEmployee" layoutX="254.0" layoutY="237.0" onMouseClicked="#gridAssignEmployee" prefHeight="200.0" prefWidth="448.0">
             <columns>
                 <TableColumn fx:id="idEmp" prefWidth="28.0" text="ID" />
                 <TableColumn fx:id="surnameEmp" prefWidth="138.0" text="Cognome" />
@@ -20,7 +20,7 @@
                 <TableColumn fx:id="cfEmp" prefWidth="182.0" text="Codice FIscale" />
             </columns>
         </TableView>
-        <TableView fx:id="tableStrumentation" layoutX="30.0" layoutY="26.0" prefHeight="200.0" prefWidth="400.0">
+        <TableView fx:id="tableStrumentation" layoutX="30.0" layoutY="26.0" onMouseClicked="#gridAssignImpStrum" prefHeight="200.0" prefWidth="400.0">
             <columns>
                 <TableColumn fx:id="idStrum" prefWidth="25.0" text="ID" />
                 <TableColumn fx:id="desStrum" prefWidth="154.0" text="Descrizione" />
@@ -28,15 +28,15 @@
                 <TableColumn fx:id="totStrum" prefWidth="89.0" text="Pezzi" />
             </columns>
         </TableView>
-        <TableView fx:id="tableSpace" layoutX="478.0" layoutY="26.0" prefHeight="200.0" prefWidth="400.0">
+        <TableView fx:id="tableSpace" layoutX="478.0" layoutY="26.0" onMouseClicked="#gridAssignImpStrum" prefHeight="200.0" prefWidth="400.0">
             <columns>
                 <TableColumn fx:id="isSpace" prefWidth="27.0" text="ID" />
                 <TableColumn fx:id="desSpace" prefWidth="148.0" text="Descrizione" />
                 <TableColumn fx:id="addressSpace" prefWidth="224.0" text="Indirizzo" />
             </columns>
         </TableView>
-        <RadioButton fx:id="dipStrumButton" layoutX="30.0" layoutY="291.0" mnemonicParsing="false" text="Dipendente-Strumentazione" />
-        <RadioButton fx:id="dipImpButton" layoutX="714.0" layoutY="291.0" mnemonicParsing="false" text="Dipendente-Impianto" />
+        <RadioButton fx:id="dipStrumButton" layoutX="30.0" layoutY="291.0" mnemonicParsing="false" onAction="#dipStrumButton" text="Dipendente-Strumentazione" />
+        <RadioButton fx:id="dipImpButton" layoutX="714.0" layoutY="291.0" mnemonicParsing="false" onAction="#dipImpButton" text="Dipendente-Impianto" />
         <GridPane layoutX="99.0" layoutY="472.0" prefHeight="90.0" prefWidth="696.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -50,8 +50,8 @@
             </rowConstraints>
             <children>
                 <Label prefHeight="16.0" prefWidth="173.0" text="Codice Fiscale Dipendente" />
-                <Label fx:id="toEditetLabelOne" prefHeight="16.0" prefWidth="186.0" GridPane.columnIndex="2" />
-                <Label fx:id="toEditetLabelTwo" prefHeight="16.0" prefWidth="171.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Label fx:id="toEditetLabelOne" prefHeight="16.0" prefWidth="186.0" text="ID" GridPane.columnIndex="2" />
+                <Label fx:id="toEditetLabelTwo" prefHeight="16.0" prefWidth="171.0" text="Descrizione" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                 <Label fx:id="cfLabelToEdit" prefHeight="16.0" prefWidth="176.0" GridPane.columnIndex="1" />
                 <Label fx:id="ToEditedValueOne" prefHeight="16.0" prefWidth="178.0" GridPane.columnIndex="3" />
                 <Label fx:id="ToEditedValueTwo" prefHeight="16.0" prefWidth="176.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />

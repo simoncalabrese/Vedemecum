@@ -11,6 +11,7 @@ import ejb.service.EmployeeService;
 import ejb.service.SpaceService;
 import ejb.service.StrumentationService;
 import ejb.utils.Enumerators;
+import ejb.utils.UtilValue;
 import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -27,6 +28,7 @@ public class AssociationController {
     private final SpaceService spaceService = new SpaceService();
     private final StrumentationService strumentationService = new StrumentationService();
     private final ViewDispatcher dispatcher = ViewDispatcher.getDispatcher();
+    private Integer command = null;
     @FXML
     private ResourceBundle resources;
 
@@ -97,12 +99,42 @@ public class AssociationController {
     private Label ToEditedValueTwo;
 
     @FXML
-    void btnAssoc(ActionEvent event) {
+    void btnAssoc() {
+        if (command != null && UtilValue.isValidString(cfLabelToEdit.getText())) {
+            switch (command) {
+                case 1: //Todo
+                    break;
+                case 2:
+                    break;//TODO
+            }
+        }
+
     }
 
     @FXML
     void btnHome() {
         dispatcher.dispatch(Enumerators.viewsPath.HOMEPAGE.getPath());
+    }
+
+
+    @FXML
+    void dipImpButton() {
+        ToEditedValueOne.setText("");
+        ToEditedValueTwo.setText("");
+        dipStrumButton.setSelected(false);
+        tableSpace.setDisable(false);
+        tableStrumentation.setDisable(true);
+
+    }
+
+    @FXML
+    void dipStrumButton() {
+        ToEditedValueOne.setText("");
+        ToEditedValueTwo.setText("");
+        dipImpButton.setSelected(false);
+        tableStrumentation.setDisable(false);
+        tableSpace.setDisable(true);
+
     }
 
     @FXML
@@ -138,6 +170,38 @@ public class AssociationController {
         desStrum.setCellValueFactory(param -> param.getValue().desStrumentazioneProperty());
         modelStrum.setCellValueFactory(param -> param.getValue().modelloStrumentazioneProperty());
         totStrum.setCellValueFactory(param -> param.getValue().pezziProperty());
+
+    }
+
+    @FXML
+    void gridAssignEmployee() {
+
+        if (tableEmployee.getSelectionModel().getSelectedIndex() >= 0) {
+            EmployeeDto employeeDto = tableEmployee.getItems().get(tableEmployee.getSelectionModel().getSelectedIndex());
+            cfLabelToEdit.setText(employeeDto.getCodFiscale());
+            tableEmployee.getSelectionModel().clearSelection();
+
+        } else {
+            if (!cfLabelToEdit.getText().equals("")) {
+                cfLabelToEdit.setText("");
+            }
+        }
+
+    }
+
+    @FXML
+    void gridAssignImpStrum() {
+        if (dipImpButton.isSelected()) {
+            SpaceDto spaceDto = tableSpace.getItems().get(tableSpace.getSelectionModel().getSelectedIndex());
+            ToEditedValueOne.setText(spaceDto.getIdSpace());
+            ToEditedValueTwo.setText(spaceDto.getDesSpace());
+            command = 1;
+        } else if (dipStrumButton.isSelected()) {
+            StrumentationDto strumentationDto = tableStrumentation.getItems().get(tableStrumentation.getSelectionModel().getSelectedIndex());
+            ToEditedValueOne.setText(strumentationDto.getIdStrumentazione());
+            ToEditedValueTwo.setText(strumentationDto.getDesStrumentazione());
+            command = 2;
+        }
 
     }
 
