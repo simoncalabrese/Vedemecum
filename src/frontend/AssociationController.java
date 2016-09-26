@@ -8,20 +8,15 @@ import api.dto.EmployeeDto;
 import api.dto.SpaceDto;
 import api.dto.AssociationDto;
 import api.dto.StrumentationDto;
-import ejb.service.AssociationEmployeeSpaceService;
-import ejb.service.EmployeeService;
-import ejb.service.SpaceService;
-import ejb.service.StrumentationService;
-import ejb.utils.Enumerators;
-import ejb.utils.UtilValue;
+import api.utils.UtilDate;
+import ejb.service.*;
+import api.utils.Enumerators;
+import api.utils.UtilValue;
 import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 
 public class AssociationController {
 
@@ -30,6 +25,8 @@ public class AssociationController {
     private final StrumentationService strumentationService = new StrumentationService();
     private final ViewDispatcher dispatcher = ViewDispatcher.getDispatcher();
     private final AssociationEmployeeSpaceService employeeSpaceService = new AssociationEmployeeSpaceService();
+    private final AssociationEmployeeStrumentationService employeeStrumentationService = new AssociationEmployeeStrumentationService();
+
     private Integer command = -1;
     @FXML
     private ResourceBundle resources;
@@ -104,6 +101,12 @@ public class AssociationController {
     private Label ToEditedValueTwo;
 
     @FXML
+    private Label dateLabel;
+
+    @FXML
+    private DatePicker dateAssign;
+
+    @FXML
     void btnAssoc() {
         if (command != -1
                 && UtilValue.isNumeric(idLabel.getText(), Integer::valueOf)
@@ -111,6 +114,7 @@ public class AssociationController {
             AssociationDto dto = new AssociationDto();
             dto.setIdAssociation(null); //because the key is "autoincrement"
             dto.setIdEmployee(idLabel.getText());
+            dto.setIdSpaceStrumentation(ToEditedValueOne.getText());
             insertForSelection(dto, command);
         } else {
             dispatcher.alert(Enumerators.Alert.VALUES, "Dipendente o \n"
@@ -122,18 +126,26 @@ public class AssociationController {
     private void insertForSelection(AssociationDto dto, Integer command) {
         switch (command) {
             case 1:
-                dto.setIdSpaceStrumentation(ToEditedValueOne.getText());
                 if (employeeSpaceService.insertAssociation(dto)) {
                     dispatcher.alert(Enumerators.Alert.SUCCESS, " Occupazione Impianti.");
-                }else {
+                } else {
                     dispatcher.alert(Enumerators.Alert.INSERT, "Associazione");
                 }
                 break;
             case 2:
-                //strumentation
-                dto.setIdAssociation(ToEditedValueOne.getText());
-                break;//TODO
+                dto.setDateAssign(UtilDate.toString(dateAssign.getValue()));
+                if (UtilValue.isValidString(dto.getDateAssign()) && employeeStrumentationService.insertAssociation(dto)) {
+                    dispatcher.alert(Enumerators.Alert.SUCCESS, " Assegnazione strumentazioni.");
+                } else {
+                    dispatcher.alert(Enumerators.Alert.INSERT, "Associazione");
+                }
+                break;
         }
+    }
+
+    @FXML
+    void btnViewAll(){
+
     }
 
     @FXML
@@ -160,6 +172,8 @@ public class AssociationController {
 
         ToEditedValueOne.setText("");
         ToEditedValueTwo.setText("");
+        dateLabel.setVisible(true);
+        dateAssign.setVisible(true);
         dipImpButton.setSelected(false);
         tableStrumentation.setDisable(false);
         tableSpace.setDisable(true);
@@ -185,6 +199,9 @@ public class AssociationController {
         ObservableList<SpaceDto> listsSpaces = FXCollections.observableArrayList();
         spaceDto.forEach(listsSpaces::add);
         tableSpace.setItems(listsSpaces);
+
+        dateAssign.setVisible(false);
+        dateLabel.setVisible(false);
     }
 
     private void inizializeTable() {

@@ -1,4 +1,4 @@
-package ejb.utils;
+package api.utils;
 
 /**
  * Created by simon on 05/09/16.

@@ -15,6 +15,8 @@ public class AssociationDto {
 
     private StringProperty idEmployee;
 
+    private StringProperty dateAssign;
+
     public String getIdAssociation() {
         return idAssociation.get();
     }
@@ -49,5 +51,17 @@ public class AssociationDto {
 
     public void setIdEmployee(String idEmployee) {
         this.idEmployee= new SimpleStringProperty(idEmployee);
+    }
+
+    public String getDateAssign() {
+        return dateAssign.get();
+    }
+
+    public StringProperty dateAssignProperty() {
+        return dateAssign;
+    }
+
+    public void setDateAssign(String dateAssign) {
+        this.dateAssign= new SimpleStringProperty(dateAssign);
     }
 }

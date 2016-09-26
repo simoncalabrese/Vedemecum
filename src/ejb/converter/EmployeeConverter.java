@@ -3,9 +3,8 @@ package ejb.converter;
 
 import api.dto.EmployeeDto;
 import api.dto.RoleDto;
-import ejb.utils.UtilDate;
+import api.utils.UtilDate;
 import model.entity.Employee;
-import model.entity.Role;
 
 /**
  * Created by simon on 31/08/16.

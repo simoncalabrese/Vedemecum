@@ -2,15 +2,13 @@ package main; /**
  * Created by simon on 03/09/16.
  */
 
-import ejb.utils.Enumerators;
+import api.utils.Enumerators;
 import frontend.Dispatcher.ViewDispatcher;
-import frontend.RoleController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import sun.applet.Main;
 
 import java.io.IOException;
 

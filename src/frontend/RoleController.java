@@ -2,11 +2,9 @@ package frontend;
 
 import api.dto.RoleDto;
 import ejb.service.RoleService;
-import ejb.utils.Enumerators;
-import ejb.utils.UtilValue;
+import api.utils.Enumerators;
+import api.utils.UtilValue;
 import frontend.Dispatcher.ViewDispatcher;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,7 +12,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 
-import javax.ejb.EJB;
 import java.util.List;
 
 public class RoleController {

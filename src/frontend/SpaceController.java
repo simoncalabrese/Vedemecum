@@ -3,11 +3,9 @@ package frontend;
 
 
 import api.dto.SpaceDto;
-import com.sun.org.apache.bcel.internal.generic.LADD;
 import ejb.service.SpaceService;
-import ejb.utils.Enumerators;
-import ejb.utils.UtilDate;
-import ejb.utils.UtilValue;
+import api.utils.Enumerators;
+import api.utils.UtilValue;
 import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

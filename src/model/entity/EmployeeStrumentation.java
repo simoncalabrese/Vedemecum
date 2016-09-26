@@ -1,6 +1,7 @@
 package model.entity;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -37,7 +38,7 @@ public class  EmployeeStrumentation {
             name = "DT_ASSEGNAZIONE",
             nullable = false
     )
-    private Date dtAssign;
+    private LocalDate dtAssign;
 
     public Integer getId() {
         return id;
@@ -63,11 +64,11 @@ public class  EmployeeStrumentation {
         this.strumentation = strumentation;
     }
 
-    public Date getDtAssign() {
+    public LocalDate getDtAssign() {
         return dtAssign;
     }
 
-    public void setDtAssign(Date dtAssign) {
+    public void setDtAssign(LocalDate dtAssign) {
         this.dtAssign = dtAssign;
     }
 }

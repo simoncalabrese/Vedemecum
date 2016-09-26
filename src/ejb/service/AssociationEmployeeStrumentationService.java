@@ -1,10 +1,10 @@
 package ejb.service;
 
 import api.dto.AssociationDto;
+import api.utils.UtilDate;
 import api.utils.UtilValue;
-import model.dao.EmployeeDao;
-import model.dao.EmployeeSpaceDao;
-import model.dao.SpaceDao;
+import model.dao.*;
+import model.entity.EmployeeStrumentation;
 import model.entity.SpaceEmployee;
 
 import java.util.ArrayList;
@@ -13,34 +13,35 @@ import java.util.List;
 /**
  * Created by simon on 31/08/16.
  */
-public class AssociationEmployeeSpaceService extends BaseService<EmployeeSpaceDao> {
+public class AssociationEmployeeStrumentationService extends BaseService<EmployeeStrumentationDao> {
 
 
-    EmployeeSpaceDao employeeSpaceDao = new EmployeeSpaceDao();
+    EmployeeStrumentationDao employeeStrumentationDao = new EmployeeStrumentationDao();
     EmployeeDao employeeDao = new EmployeeDao();
-    SpaceDao spaceDao = new SpaceDao();
+    StrumentationDao strumentationDao = new StrumentationDao();
 
     @Override
-    public EmployeeSpaceDao getDao() {
-        return employeeSpaceDao;
+    public EmployeeStrumentationDao getDao() {
+        return employeeStrumentationDao;
     }
 
-    public SpaceEmployee getAssociationById(Integer id) {
+    public EmployeeStrumentation getAssociationById(Integer id) {
         return getDao().findAssociation(id);
     }
 
     public Boolean insertAssociation(AssociationDto dto) {
-        SpaceEmployee spaceEmployee = new SpaceEmployee();
-        spaceEmployee.setId(UtilValue.toNumber(dto.getIdSpaceStrumentation(), Integer::valueOf));
-        spaceEmployee.setEmployee(employeeDao
+        EmployeeStrumentation employeeStrumentation = new EmployeeStrumentation();
+        employeeStrumentation.setId(UtilValue.toNumber(dto.getIdSpaceStrumentation(), Integer::valueOf));
+        employeeStrumentation.setEmployee(employeeDao
                 .findEmployee(UtilValue.toNumber(dto.getIdEmployee()
                         , Integer::valueOf))
         );
-        spaceEmployee.setSpace(spaceDao
-                .findSpace(UtilValue.toNumber(dto.getIdSpaceStrumentation()
+        employeeStrumentation.setStrumentation(strumentationDao
+                .findStrumentation(UtilValue.toNumber(dto.getIdSpaceStrumentation()
                         , Integer::valueOf))
         );
-        return employeeSpaceDao.insertAssociation(spaceEmployee);
+        employeeStrumentation.setDtAssign(UtilDate.toDate(dto.getDateAssign()));
+        return employeeStrumentationDao.insertAssociation(employeeStrumentation);
 
     }
 
@@ -59,9 +60,9 @@ public class AssociationEmployeeSpaceService extends BaseService<EmployeeSpaceDa
                     ? spaceEmployee.getEmployee()
                     .getIdDipedente().toString()
                     : null);
-            dto.setIdSpaceStrumentation(spaceEmployee.getSpace() != null
-                    ? spaceEmployee.getSpace()
-                    .getIdImpianto().toString()
+            dto.setIdSpaceStrumentation(spaceEmployee.getStrumentation() != null
+                    ? spaceEmployee.getStrumentation()
+                    .getIdStrumentazione().toString()
                     : null);
             dtos.add(dto);
         });

@@ -1,4 +1,4 @@
-package ejb.utils;
+package api.utils;
 
 import java.util.function.Function;
 

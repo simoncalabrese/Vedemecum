@@ -50,6 +50,7 @@ public class Strumentation {
     private LocalDate dtAcquisto;
 
     @OneToMany(
+            targetEntity=EmployeeStrumentation.class,
             mappedBy = "strumentation"
     )
     private List<EmployeeStrumentation> employeeStrumentations;

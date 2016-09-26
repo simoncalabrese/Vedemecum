@@ -44,6 +44,7 @@ public class BaseDaoImplementation implements BaseDaoInterface {
             transaction.commit();
             return true;
         } catch (PersistenceException e) {
+            e.printStackTrace();
             return false;
         }
     }

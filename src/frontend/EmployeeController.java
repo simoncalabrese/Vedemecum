@@ -8,8 +8,8 @@ import api.dto.EmployeeDto;
 import api.dto.RoleDto;
 import ejb.service.EmployeeService;
 import ejb.service.RoleService;
-import ejb.utils.Enumerators;
-import ejb.utils.UtilDate;
+import api.utils.Enumerators;
+import api.utils.UtilDate;
 import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -20,7 +20,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 
 public class EmployeeController {
 

@@ -1,6 +1,6 @@
 package frontend.Dispatcher;
 
-import ejb.utils.Enumerators;
+import api.utils.Enumerators;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;

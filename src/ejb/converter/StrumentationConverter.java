@@ -1,12 +1,8 @@
 package ejb.converter;
 
 
-import api.dto.EmployeeDto;
-import api.dto.RoleDto;
 import api.dto.StrumentationDto;
-import ejb.utils.UtilDate;
-import ejb.utils.UtilValue;
-import model.entity.Employee;
+import api.utils.UtilDate;
 import model.entity.Strumentation;
 
 /**

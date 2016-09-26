@@ -78,6 +78,7 @@ public class Employee {
     private Role role;
 
     @OneToMany(
+            targetEntity=EmployeeStrumentation.class,
             mappedBy = "employee"
     )
     private List<EmployeeStrumentation> employeeStrumentations;

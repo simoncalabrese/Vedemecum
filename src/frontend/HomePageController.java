@@ -4,7 +4,7 @@ package frontend;
  * Created by simon on 05/09/16.
  */
 
-import ejb.utils.Enumerators;
+import api.utils.Enumerators;
 import frontend.Dispatcher.ViewDispatcher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

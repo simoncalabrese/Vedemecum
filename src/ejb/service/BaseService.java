@@ -1,7 +1,6 @@
 package ejb.service;
 
 
-import api.interfaces.BaseServiceInterface;
 import model.dao.BaseDaoInterface;
 
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.stream.Collectors;
 /**
  * Created by simon on 31/08/16.
  */
-public abstract class BaseService<T extends BaseDaoInterface> implements BaseServiceInterface {
+public abstract class BaseService<T extends BaseDaoInterface> {
 
     public abstract T getDao();
 
@@ -24,8 +23,8 @@ public abstract class BaseService<T extends BaseDaoInterface> implements BaseSer
         return input.stream().map(converter).collect(Collectors.toList());
     }
 
-    public <I,L,O> O biconverter(I input1, L input2, BiFunction<I,L,O> converter) {
-        return converter.apply(input1,input2);
+    public <I, L, O> O biconverter(I input1, L input2, BiFunction<I, L, O> converter) {
+        return converter.apply(input1, input2);
     }
 
 }

@@ -3,14 +3,12 @@ package frontend;
 
 import api.dto.UserDto;
 import ejb.service.LoginService;
-import ejb.utils.Enumerators;
+import api.utils.Enumerators;
 import frontend.Dispatcher.ViewDispatcher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
-import javax.swing.text.View;
 
 
 public class LoginController {
