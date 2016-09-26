@@ -10,65 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d163710-4def-45f3-929f-59a9404e54ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ejb/service/AssociationEmployeeStrumentationService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/dao/EmployeeStrumentationDao.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/api/interfaces/BaseServiceInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/utils/Enumerators$Alert.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/utils/Enumerators$viewsPath.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/utils/Enumerators.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/utils/UtilDate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/utils/UtilValue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/api/interfaces/BaseServiceInterface.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ejb/utils/Enumerators.java" afterPath="$PROJECT_DIR$/src/api/utils/Enumerators.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ejb/utils/UtilDate.java" afterPath="$PROJECT_DIR$/src/api/utils/UtilDate.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ejb/utils/UtilValue.java" afterPath="$PROJECT_DIR$/src/api/utils/UtilValue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/api/dto/AssociationDto.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/api/dto/AssociationDto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/EmployeeConverter$ToDto.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/EmployeeConverter$ToDto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/EmployeeConverter$ToEntity.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/EmployeeConverter$ToEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/EmployeeConverter.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/EmployeeConverter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/SpaceConverter$ToDto.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/SpaceConverter$ToDto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/SpaceConverter$ToEntity.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/SpaceConverter$ToEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/SpaceConverter.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/SpaceConverter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/StrumentationConverter$ToDto.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/StrumentationConverter$ToDto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/StrumentationConverter$ToEntity.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/StrumentationConverter$ToEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/StrumentationConverter.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/converter/StrumentationConverter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/service/AssociationEmployeeSpaceService.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/service/AssociationEmployeeSpaceService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/service/BaseService.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/ejb/service/BaseService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/AssociationController.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/AssociationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/Dispatcher/ViewDispatcher.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/Dispatcher/ViewDispatcher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/EmployeeController.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/EmployeeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/HomePageController.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/HomePageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/LoginController.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/RoleController.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/RoleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/SpaceController.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/SpaceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/StrumentationController.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/StrumentationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/main/MainClass.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/main/MainClass.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/model/dao/EmployeeSpaceDao.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/model/dao/EmployeeSpaceDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/model/entity/EmployeeStrumentation.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/model/entity/EmployeeStrumentation.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/frontend/AssociationListView.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/frontend/AssociationListViewController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/AssociationEmployeeView.fxml" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/AssociationEmployeeView.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/dto/AssociationDto.java" afterPath="$PROJECT_DIR$/src/api/dto/AssociationDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ejb/converter/EmployeeConverter.java" afterPath="$PROJECT_DIR$/src/ejb/converter/EmployeeConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ejb/converter/SpaceConverter.java" afterPath="$PROJECT_DIR$/src/ejb/converter/SpaceConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ejb/converter/StrumentationConverter.java" afterPath="$PROJECT_DIR$/src/ejb/converter/StrumentationConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ejb/service/AssociationEmployeeSpaceService.java" afterPath="$PROJECT_DIR$/src/ejb/service/AssociationEmployeeSpaceService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ejb/service/BaseService.java" afterPath="$PROJECT_DIR$/src/ejb/service/BaseService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/AssociationController.java" afterPath="$PROJECT_DIR$/src/frontend/AssociationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/AssociationEmployeeView.fxml" afterPath="$PROJECT_DIR$/src/frontend/AssociationEmployeeView.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/Dispatcher/ViewDispatcher.java" afterPath="$PROJECT_DIR$/src/frontend/Dispatcher/ViewDispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/EmployeeController.java" afterPath="$PROJECT_DIR$/src/frontend/EmployeeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/HomePageController.java" afterPath="$PROJECT_DIR$/src/frontend/HomePageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/LoginController.java" afterPath="$PROJECT_DIR$/src/frontend/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/RoleController.java" afterPath="$PROJECT_DIR$/src/frontend/RoleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/SpaceController.java" afterPath="$PROJECT_DIR$/src/frontend/SpaceController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/StrumentationController.java" afterPath="$PROJECT_DIR$/src/frontend/StrumentationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/MainClass.java" afterPath="$PROJECT_DIR$/src/main/MainClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/dao/BaseDaoImplementation.java" afterPath="$PROJECT_DIR$/src/model/dao/BaseDaoImplementation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/dao/EmployeeSpaceDao.java" afterPath="$PROJECT_DIR$/src/model/dao/EmployeeSpaceDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/entity/Employee.java" afterPath="$PROJECT_DIR$/src/model/entity/Employee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/entity/EmployeeStrumentation.java" afterPath="$PROJECT_DIR$/src/model/entity/EmployeeStrumentation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/entity/Strumentation.java" afterPath="$PROJECT_DIR$/src/model/entity/Strumentation.java" />
     </list>
     <ignored path="ProgettoIng.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,11 +34,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AssociationController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AssociationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/AssociationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
+            <state relative-caret-position="155">
               <caret line="145" column="9" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssociationListView.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/AssociationListView.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssociationListViewController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/frontend/AssociationListViewController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,8 +77,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -129,7 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/api/dto/RoleDto.java" />
         <option value="$PROJECT_DIR$/src/frontend/Dispatcher/ViewDispatcher.java" />
         <option value="$PROJECT_DIR$/src/model/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/ejb/service/LoginService.java" />
@@ -180,6 +148,7 @@
         <option value="$PROJECT_DIR$/src/model/dao/BaseDaoImplementation.java" />
         <option value="$PROJECT_DIR$/src/model/entity/EmployeeStrumentation.java" />
         <option value="$PROJECT_DIR$/src/frontend/AssociationController.java" />
+        <option value="$PROJECT_DIR$/src/frontend/AssociationListViewController.java" />
       </list>
     </option>
   </component>
@@ -884,8 +853,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35157546" sideWeight="0.54172987" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965213" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32669982" sideWeight="0.49603623" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35157546" sideWeight="0.4582701" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24212272" sideWeight="0.49150622" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35157546" sideWeight="0.4582701" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24212272" sideWeight="0.49150622" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23444612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -977,20 +946,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ejb/converter/BiSuperConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ejb/converter/RoleConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/dao/RoleDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1180,7 +1135,7 @@
         <state relative-caret-position="409">
           <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
           <folding>
-            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1238,12 +1193,12 @@
         <state relative-caret-position="183">
           <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
           <folding>
-            <element signature="e#1341#1342#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1430#1431#0" expanded="true" />
-            <element signature="e#1463#1464#0" expanded="true" />
-            <element signature="e#1515#1516#0" expanded="true" />
-            <element signature="e#1584#1585#0" expanded="true" />
+            <element signature="e#1341#1342#0" expanded="false" />
+            <element signature="e#1380#1381#0" expanded="false" />
+            <element signature="e#1430#1431#0" expanded="false" />
+            <element signature="e#1463#1464#0" expanded="false" />
+            <element signature="e#1515#1516#0" expanded="false" />
+            <element signature="e#1584#1585#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1358,8 +1313,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/AssociationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
+        <state relative-caret-position="155">
           <caret line="145" column="9" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/AssociationListView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/AssociationListViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
