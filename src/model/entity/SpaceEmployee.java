@@ -12,6 +12,7 @@ import javax.persistence.*;
 public class SpaceEmployee {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(
             name = "ID_OCC_IMP",
             nullable = false

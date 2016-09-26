@@ -49,12 +49,14 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Label prefHeight="16.0" prefWidth="173.0" text="Codice Fiscale Dipendente" />
+                <Label prefHeight="16.0" prefWidth="173.0" text="Codice Fiscale Dipendente" GridPane.rowIndex="1" />
                 <Label fx:id="toEditetLabelOne" prefHeight="16.0" prefWidth="186.0" text="ID" GridPane.columnIndex="2" />
                 <Label fx:id="toEditetLabelTwo" prefHeight="16.0" prefWidth="171.0" text="Descrizione" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                <Label fx:id="cfLabelToEdit" prefHeight="16.0" prefWidth="176.0" GridPane.columnIndex="1" />
+                <Label fx:id="cfLabelToEdit" prefHeight="16.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <Label fx:id="ToEditedValueOne" prefHeight="16.0" prefWidth="178.0" GridPane.columnIndex="3" />
                 <Label fx:id="ToEditedValueTwo" prefHeight="16.0" prefWidth="176.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label prefHeight="16.0" prefWidth="173.0" text="ID Dipendente" />
+            <Label fx:id="idLabel" prefHeight="16.0" prefWidth="173.0" GridPane.columnIndex="1" />
             </children>
         </GridPane>
         <Button layoutX="383.0" layoutY="562.0" mnemonicParsing="false" onAction="#btnAssoc" prefHeight="26.0" prefWidth="149.0" text="Associa" />

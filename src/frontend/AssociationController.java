@@ -6,7 +6,9 @@ import java.util.ResourceBundle;
 
 import api.dto.EmployeeDto;
 import api.dto.SpaceDto;
+import api.dto.AssociationDto;
 import api.dto.StrumentationDto;
+import ejb.service.AssociationEmployeeSpaceService;
 import ejb.service.EmployeeService;
 import ejb.service.SpaceService;
 import ejb.service.StrumentationService;
@@ -15,7 +17,6 @@ import ejb.utils.UtilValue;
 import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -28,7 +29,8 @@ public class AssociationController {
     private final SpaceService spaceService = new SpaceService();
     private final StrumentationService strumentationService = new StrumentationService();
     private final ViewDispatcher dispatcher = ViewDispatcher.getDispatcher();
-    private Integer command = null;
+    private final AssociationEmployeeSpaceService employeeSpaceService = new AssociationEmployeeSpaceService();
+    private Integer command = -1;
     @FXML
     private ResourceBundle resources;
 
@@ -93,6 +95,9 @@ public class AssociationController {
     private Label cfLabelToEdit;
 
     @FXML
+    private Label idLabel;
+
+    @FXML
     private Label ToEditedValueOne;
 
     @FXML
@@ -100,15 +105,35 @@ public class AssociationController {
 
     @FXML
     void btnAssoc() {
-        if (command != null && UtilValue.isValidString(cfLabelToEdit.getText())) {
-            switch (command) {
-                case 1: //Todo
-                    break;
-                case 2:
-                    break;//TODO
-            }
+        if (command != -1
+                && UtilValue.isNumeric(idLabel.getText(), Integer::valueOf)
+                && UtilValue.isNumeric(ToEditedValueOne.getText(), Integer::valueOf)) {
+            AssociationDto dto = new AssociationDto();
+            dto.setIdAssociation(null); //because the key is "autoincrement"
+            dto.setIdEmployee(idLabel.getText());
+            insertForSelection(dto, command);
+        } else {
+            dispatcher.alert(Enumerators.Alert.VALUES, "Dipendente o \n"
+                    + (command.equals(1) ? "Impianti" : "Strumentazioni"));
         }
 
+    }
+
+    private void insertForSelection(AssociationDto dto, Integer command) {
+        switch (command) {
+            case 1:
+                dto.setIdSpaceStrumentation(ToEditedValueOne.getText());
+                if (employeeSpaceService.insertAssociation(dto)) {
+                    dispatcher.alert(Enumerators.Alert.SUCCESS, " Occupazione Impianti.");
+                }else {
+                    dispatcher.alert(Enumerators.Alert.INSERT, "Associazione");
+                }
+                break;
+            case 2:
+                //strumentation
+                dto.setIdAssociation(ToEditedValueOne.getText());
+                break;//TODO
+        }
     }
 
     @FXML
@@ -119,6 +144,8 @@ public class AssociationController {
 
     @FXML
     void dipImpButton() {
+        tableSpace.setDisable(false);
+
         ToEditedValueOne.setText("");
         ToEditedValueTwo.setText("");
         dipStrumButton.setSelected(false);
@@ -129,6 +156,8 @@ public class AssociationController {
 
     @FXML
     void dipStrumButton() {
+        tableStrumentation.setDisable(false);
+
         ToEditedValueOne.setText("");
         ToEditedValueTwo.setText("");
         dipImpButton.setSelected(false);
@@ -143,8 +172,8 @@ public class AssociationController {
 
         //Populate table Dipendenti
         ObservableList<EmployeeDto> listEmployees = FXCollections.observableArrayList();
-        List<EmployeeDto> roleDtos = employeeService.getAllEmployees();
-        roleDtos.forEach(listEmployees::add);
+        List<EmployeeDto> dto = employeeService.getAllEmployees();
+        dto.forEach(listEmployees::add);
         tableEmployee.setItems(listEmployees);
         //populate table Strumentazioni
         ObservableList<StrumentationDto> listsStrumentations = FXCollections.observableArrayList();
@@ -170,6 +199,8 @@ public class AssociationController {
         desStrum.setCellValueFactory(param -> param.getValue().desStrumentazioneProperty());
         modelStrum.setCellValueFactory(param -> param.getValue().modelloStrumentazioneProperty());
         totStrum.setCellValueFactory(param -> param.getValue().pezziProperty());
+        tableStrumentation.setDisable(true);
+        tableSpace.setDisable(true);
 
     }
 
@@ -178,11 +209,13 @@ public class AssociationController {
 
         if (tableEmployee.getSelectionModel().getSelectedIndex() >= 0) {
             EmployeeDto employeeDto = tableEmployee.getItems().get(tableEmployee.getSelectionModel().getSelectedIndex());
+            idLabel.setText(employeeDto.getIdDipedente());
             cfLabelToEdit.setText(employeeDto.getCodFiscale());
             tableEmployee.getSelectionModel().clearSelection();
 
         } else {
             if (!cfLabelToEdit.getText().equals("")) {
+                idLabel.setText("");
                 cfLabelToEdit.setText("");
             }
         }
