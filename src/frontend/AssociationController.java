@@ -160,6 +160,8 @@ public class AssociationController {
 
         ToEditedValueOne.setText("");
         ToEditedValueTwo.setText("");
+        dateLabel.setVisible(false);
+        dateAssign.setVisible(float);
         dipStrumButton.setSelected(false);
         tableSpace.setDisable(false);
         tableStrumentation.setDisable(true);
@@ -245,11 +247,13 @@ public class AssociationController {
             SpaceDto spaceDto = tableSpace.getItems().get(tableSpace.getSelectionModel().getSelectedIndex());
             ToEditedValueOne.setText(spaceDto.getIdSpace());
             ToEditedValueTwo.setText(spaceDto.getDesSpace());
+            tableSpace.getSelectionModel().clearSelection();
             command = 1;
         } else if (dipStrumButton.isSelected()) {
             StrumentationDto strumentationDto = tableStrumentation.getItems().get(tableStrumentation.getSelectionModel().getSelectedIndex());
             ToEditedValueOne.setText(strumentationDto.getIdStrumentazione());
             ToEditedValueTwo.setText(strumentationDto.getDesStrumentazione());
+            tableStrumentation.getSelectionModel().clearSelection();
             command = 2;
         }
 
