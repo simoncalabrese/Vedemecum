@@ -8,6 +8,8 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import main.MainClass;
 
 /**
@@ -16,6 +18,7 @@ import main.MainClass;
 public class ViewDispatcher {
 
     static ViewDispatcher dispatcher = new ViewDispatcher();
+
 
     public static ViewDispatcher getDispatcher() {
         return dispatcher;
@@ -39,5 +42,25 @@ public class ViewDispatcher {
         alert.setContentText(msg.getBody() + (variable != null ? variable : ""));
 
         alert.showAndWait();
+    }
+
+
+    public void dialog(String view) {
+        // Create the dialog Stage.
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainClass.class.getClassLoader().getResource((view)));
+            AnchorPane pane = loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Edit Person");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(MainClass.getPrimaryStage());
+            Scene scene = new Scene(pane);
+            dialogStage.setScene(scene);
+            dialogStage.showAndWait();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }

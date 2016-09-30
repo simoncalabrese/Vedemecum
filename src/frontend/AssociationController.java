@@ -144,7 +144,9 @@ public class AssociationController {
     }
 
     @FXML
-    void btnViewAll(){
+    void btnViewAll() {
+
+        dispatcher.dialog(Enumerators.viewsPath.ASSOCIATIONDIALOG.getPath());
 
     }
 
