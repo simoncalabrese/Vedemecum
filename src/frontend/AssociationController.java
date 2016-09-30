@@ -161,7 +161,7 @@ public class AssociationController {
         ToEditedValueOne.setText("");
         ToEditedValueTwo.setText("");
         dateLabel.setVisible(false);
-        dateAssign.setVisible(float);
+        dateAssign.setVisible(false);
         dipStrumButton.setSelected(false);
         tableSpace.setDisable(false);
         tableStrumentation.setDisable(true);
