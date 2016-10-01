@@ -14,8 +14,8 @@
     <root id="root">
       <element id="archive" name="ProgettoIng.jar">
         <element id="module-output" name="ProgettoIng" />
+        <element id="library" level="project" name="jpa" />
       </element>
-      <element id="library" level="project" name="jpa" />
     </root>
   </artifact>
 </component>

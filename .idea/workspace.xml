@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d163710-4def-45f3-929f-59a9404e54ec" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoIng/ProgettoIng.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ProgettoIng.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ProgettoIng.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -324,10 +325,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="artifacts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProgettoIng" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -866,7 +863,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475316708605</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="nella cartella out/artifacts/ProgettoIng c'è il jar che si avvia">
+      <created>1475317764271</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1475317764271</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -982,7 +986,8 @@
     <MESSAGE value="show dialog and fix" />
     <MESSAGE value="look this" />
     <MESSAGE value="finite le associazioni tra dipendenti e impianti e strumentazioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="finite le associazioni tra dipendenti e impianti e strumentazioni" />
+    <MESSAGE value="nella cartella out/artifacts/ProgettoIng c'è il jar che si avvia" />
+    <option name="LAST_COMMIT_MESSAGE" value="nella cartella out/artifacts/ProgettoIng c'è il jar che si avvia" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
