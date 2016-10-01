@@ -1,15 +1,16 @@
 package frontend;
 
 import api.dto.AssociationDto;
+import api.utils.Enumerators;
 import ejb.service.AssociationEmployeeSpaceService;
 import ejb.service.AssociationEmployeeStrumentationService;
+import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.stage.Stage;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class AssociationListViewController {
             new AssociationEmployeeSpaceService();
     private AssociationEmployeeStrumentationService employeeStrumentationService =
             new AssociationEmployeeStrumentationService();
+    private final ViewDispatcher dispatcher = ViewDispatcher.getDispatcher();
 
 
     @FXML
@@ -50,10 +52,51 @@ public class AssociationListViewController {
     @FXML
     private TableColumn<AssociationDto, String> date;
 
+    private AssociationDto empSpaceDto;
+    private AssociationDto empStrumentationDto;
+
+    @FXML
+    void tableSpaceClick() {
+        empStrumentationDto = null;
+        tableEmpStrum.getSelectionModel().clearSelection();
+        empSpaceDto = tableEmpSpace.getItems().get(tableEmpSpace.getSelectionModel().getSelectedIndex());
+
+    }
+
+    @FXML
+    void tableStrumentationClick() {
+        empSpaceDto = null;
+        tableEmpSpace.getSelectionModel().clearSelection();
+        empStrumentationDto = tableEmpStrum.getItems().get(tableEmpStrum.getSelectionModel().getSelectedIndex());
+
+    }
+
 
     @FXML
     void btnDelete(ActionEvent event) {
+        if (empStrumentationDto != null || empSpaceDto != null) {
+            if (empSpaceDto != null) {
+                successOrFail(employeeSpaceService
+                        .deleteAssociation(Integer
+                                .valueOf(empSpaceDto.getIdAssociation())));
+            } else {
+                successOrFail(employeeStrumentationService
+                        .deleteAssociation(Integer
+                                .valueOf(empStrumentationDto.getIdAssociation())));
+            }
 
+        } else {
+            dispatcher.alert(Enumerators.Alert.SELECTIONROW, null);
+        }
+
+    }
+
+    private void successOrFail(Boolean operation) {
+        if (operation) {
+            populateTable();
+        } else {
+            dispatcher.alert(Enumerators.Alert.DELETE, null);
+        }
     }
 
 

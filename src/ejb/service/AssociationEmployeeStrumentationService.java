@@ -46,23 +46,26 @@ public class AssociationEmployeeStrumentationService extends BaseService<Employe
     }
 
     public Boolean deleteAssociation(Integer id) {
-        return null; //Todo Implementation HOW
+        return getDao().deleteAssociation(id);
     }
 
     public List<AssociationDto> getAllAssociation() {
         List<AssociationDto> dtos = new ArrayList<>();
-        getDao().totAssociation().forEach(spaceEmployee -> {
+        getDao().totAssociation().forEach(elem -> {
             AssociationDto dto = new AssociationDto();
-            dto.setIdAssociation(spaceEmployee.getId() != null
-                    ? spaceEmployee.getId().toString()
+            dto.setIdAssociation(elem.getId() != null
+                    ? elem.getId().toString()
                     : null);
-            dto.setIdEmployee(spaceEmployee.getEmployee() != null
-                    ? spaceEmployee.getEmployee()
+            dto.setIdEmployee(elem.getEmployee() != null
+                    ? elem.getEmployee()
                     .getIdDipedente().toString()
                     : null);
-            dto.setIdSpaceStrumentation(spaceEmployee.getStrumentation() != null
-                    ? spaceEmployee.getStrumentation()
+            dto.setIdSpaceStrumentation(elem.getStrumentation() != null
+                    ? elem.getStrumentation()
                     .getIdStrumentazione().toString()
+                    : null);
+            dto.setDateAssign(elem.getDtAssign() != null
+                    ? UtilDate.toString(elem.getDtAssign())
                     : null);
             dtos.add(dto);
         });

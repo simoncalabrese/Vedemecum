@@ -45,7 +45,7 @@ public class AssociationEmployeeSpaceService extends BaseService<EmployeeSpaceDa
     }
 
     public Boolean deleteAssociation(Integer id) {
-        return null; //Todo Implementation HOW
+        return getDao().deleteAssociation(id);
     }
 
     public List<AssociationDto> getAllAssociation() {
