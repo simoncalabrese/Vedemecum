@@ -26,7 +26,7 @@ public class HomePageController {
 
     @FXML
     void openCard() {
-
+        dispatcher.dispatch(Enumerators.viewsPath.CARD.getPath());
     }
 
     @FXML

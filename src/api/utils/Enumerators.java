@@ -11,6 +11,7 @@ public class Enumerators {
         ROLE("frontend/RoleView.fxml"),
         EMPLOYEE("frontend/EmployeeView.fxml"),
         SPACE("frontend/SpaceView.fxml"),
+        CARD   ("frontend/CardView.fxml"),
         STRUMENTATION("frontend/StrumentationView.fxml"),
         ASSOCIATION("frontend/AssociationEmployeeView.fxml"),
         ASSOCIATIONDIALOG("frontend/AssociationListView.fxml");
