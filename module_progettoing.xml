@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_progettoing" default="compile.module.progettoing">
+  <dirname property="module.progettoing.basedir" file="${ant.file.module_progettoing}"/>
+  
+  <property name="module.jdk.home.progettoing" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.progettoing" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.progettoing" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.progettoing" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="progettoing.output.dir" value="${module.progettoing.basedir}/out/production/ProgettoIng"/>
+  <property name="progettoing.testoutput.dir" value="${module.progettoing.basedir}/out/test/ProgettoIng"/>
+  
+  <path id="progettoing.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="progettoing.module.production.classpath">
+    <path refid="${module.jdk.classpath.progettoing}"/>
+    <path refid="library.jpa.classpath"/>
+  </path>
+  
+  <path id="progettoing.runtime.production.module.classpath">
+    <pathelement location="${progettoing.output.dir}"/>
+    <path refid="library.jpa.classpath"/>
+  </path>
+  
+  <path id="progettoing.module.classpath">
+    <path refid="${module.jdk.classpath.progettoing}"/>
+    <pathelement location="${progettoing.output.dir}"/>
+    <path refid="library.jpa.classpath"/>
+  </path>
+  
+  <path id="progettoing.runtime.module.classpath">
+    <pathelement location="${progettoing.testoutput.dir}"/>
+    <pathelement location="${progettoing.output.dir}"/>
+    <path refid="library.jpa.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.progettoing">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.progettoing">
+    <patternset refid="excluded.from.module.progettoing"/>
+  </patternset>
+  
+  <path id="progettoing.module.sourcepath">
+    <dirset dir="${module.progettoing.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.progettoing" depends="compile.module.progettoing.production,compile.module.progettoing.tests" description="Compile module ProgettoIng"/>
+  
+  <target name="compile.module.progettoing.production" depends="register.custom.compilers" description="Compile module ProgettoIng; production classes">
+    <mkdir dir="${progettoing.output.dir}"/>
+    <javac2 destdir="${progettoing.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.progettoing}/javac">
+      <compilerarg line="${compiler.args.progettoing}"/>
+      <bootclasspath refid="progettoing.module.bootclasspath"/>
+      <classpath refid="progettoing.module.production.classpath"/>
+      <src refid="progettoing.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.progettoing"/>
+    </javac2>
+    
+    <copy todir="${progettoing.output.dir}">
+      <fileset dir="${module.progettoing.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.progettoing.tests" depends="register.custom.compilers,compile.module.progettoing.production" description="compile module ProgettoIng; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.progettoing" description="cleanup module">
+    <delete dir="${progettoing.output.dir}"/>
+    <delete dir="${progettoing.testoutput.dir}"/>
+  </target>
+</project>
