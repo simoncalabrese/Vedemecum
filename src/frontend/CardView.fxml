@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
@@ -7,7 +9,6 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.CardController">
    <children>
@@ -23,27 +24,39 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TableView fx:id="tableEmp" prefHeight="200.0" prefWidth="200.0">
+            <TableView fx:id="tableEmp" onMouseClicked="#employeeAssign" prefHeight="200.0" prefWidth="200.0">
               <columns>
                 <TableColumn fx:id="idEmp" prefWidth="107.0" text="ID Dipendente" />
                 <TableColumn fx:id="surnameEmp" prefWidth="130.0" text="Cognome" />
                   <TableColumn fx:id="nameEmp" prefWidth="112.0" text="Nome" />
               </columns>
             </TableView>
-            <TableView fx:id="tableStrum" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+            <TableView fx:id="tableStrum" onMouseClicked="#strumentationAssign" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
               <columns>
                 <TableColumn fx:id="idStrum" prefWidth="133.0" text="ID Strumentazione" />
                 <TableColumn fx:id="prodStrum" prefWidth="105.0" text="Marca" />
                   <TableColumn fx:id="modelStrum" prefWidth="111.0" text="Modello" />
               </columns>
             </TableView>
-            <TableView fx:id="tableSpace" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+            <TableView fx:id="tableSpace" onMouseClicked="#spaceAssign" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
               <columns>
                 <TableColumn fx:id="idSpace" prefWidth="111.0" text="ID Impianto" />
                 <TableColumn fx:id="desSpace" prefWidth="237.0" text="Descrizione Impianto" />
               </columns>
             </TableView>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnShow" prefHeight="27.0" prefWidth="353.0" text="Show Selected" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
+      <ButtonBar layoutX="495.0" layoutY="746.0" prefHeight="40.0" prefWidth="304.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#btnView" text="Visualizza Scheda" />
+            <Button mnemonicParsing="false" onAction="#btnInsert" text="Inserisci" />
+        </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="58.0" layoutY="746.0" prefHeight="40.0" prefWidth="79.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#btnHome" text="Home" />
+         </buttons>
+      </ButtonBar>
    </children>
 </AnchorPane>

@@ -15,6 +15,7 @@ import java.io.IOException;
 public class MainClass extends Application {
 
     private static Stage primaryStage;
+    private static Stage dialogStage;
     private AnchorPane rootLayout;
 
     public static void main(String[] args) {
@@ -44,5 +45,9 @@ public class MainClass extends Application {
 
     public static Stage getPrimaryStage() {
         return primaryStage;
+    }
+
+    public static Stage getDialogStage() {
+        return dialogStage;
     }
 }

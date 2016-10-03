@@ -1,18 +1,19 @@
 package frontend;
 
-import java.net.URL;
 import java.util.List;
-import java.util.ResourceBundle;
 
 import api.dto.EmployeeDto;
 import api.dto.SpaceDto;
 import api.dto.StrumentationDto;
+import api.utils.Enumerators;
 import ejb.service.EmployeeService;
 import ejb.service.SpaceService;
 import ejb.service.StrumentationService;
+import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -23,12 +24,24 @@ public class CardController {
     private EmployeeService employeeService = new EmployeeService();
     private SpaceService spaceService = new SpaceService();
     StrumentationService strumentationService = new StrumentationService();
+    private final ViewDispatcher dispatcher = ViewDispatcher.getDispatcher();
 
-    @FXML
-    private ResourceBundle resources;
+    List<EmployeeDto> employeeDto;
+    List<StrumentationDto> strumentationDto;
+    List<SpaceDto> spaceDto;
 
-    @FXML
-    private URL location;
+
+    public List<EmployeeDto> getEmployeeDto() {
+        return employeeDto;
+    }
+
+    public List<StrumentationDto> getStrumentationDto() {
+        return strumentationDto;
+    }
+
+    public List<SpaceDto> getSpaceDto() {
+        return spaceDto;
+    }
 
     @FXML
     private TextArea headerText;
@@ -69,6 +82,54 @@ public class CardController {
     @FXML
     private TableColumn<SpaceDto, String> desSpace;
 
+
+    @FXML
+    void btnHome() {
+        dispatcher.dispatch(Enumerators.viewsPath.HOMEPAGE.getPath());
+
+    }
+
+    @FXML
+    void btnInsert() {
+
+    }
+
+    @FXML
+    void btnView() {
+
+    }
+
+    @FXML
+    void btnShow() {
+        strumentationDto = tableStrum.getSelectionModel().getSelectedItems();
+        employeeDto = tableEmp.getSelectionModel().getSelectedItems();
+        spaceDto = tableSpace.getSelectionModel().getSelectedItems();
+        dispatcher.dialog(Enumerators.viewsPath.CARDDIALOGSELECTED.getPath());
+
+    }
+
+
+    @FXML
+    void employeeAssign() {
+
+
+    }
+
+
+    @FXML
+    void spaceAssign() {
+
+
+
+    }
+
+    @FXML
+    void strumentationAssign() {
+
+
+
+    }
+
     @FXML
     void initialize() {
         idEmp.setCellValueFactory(employee -> employee.getValue().idDipedenteProperty());
@@ -79,6 +140,9 @@ public class CardController {
         prodStrum.setCellValueFactory(strumentation -> strumentation.getValue().marcaStrumentazioneProperty());
         idSpace.setCellValueFactory(param -> param.getValue().idSpaceProperty());
         desSpace.setCellValueFactory(param -> param.getValue().desSpaceProperty());
+        tableSpace.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        tableStrum.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        tableEmp.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         populateTables();
     }
 

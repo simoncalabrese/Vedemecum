@@ -30,6 +30,7 @@ public class ViewDispatcher {
             loader.setLocation(MainClass.class.getClassLoader().getResource(view));
             AnchorPane pane = loader.load();
             MainClass.getPrimaryStage().setScene(new Scene(pane));
+            MainClass.getPrimaryStage().show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -46,13 +47,11 @@ public class ViewDispatcher {
 
 
     public void dialog(String view) {
-        // Create the dialog Stage.
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainClass.class.getClassLoader().getResource((view)));
             AnchorPane pane = loader.load();
-            Stage dialogStage = new Stage();
-            dialogStage.setTitle("Edit Person");
+            Stage dialogStage = MainClass.getDialogStage();
             dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(MainClass.getPrimaryStage());
             Scene scene = new Scene(pane);
