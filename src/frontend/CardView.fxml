@@ -24,21 +24,21 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TableView fx:id="tableEmp" onMouseClicked="#employeeAssign" prefHeight="200.0" prefWidth="200.0">
+            <TableView fx:id="tableEmp" prefHeight="200.0" prefWidth="200.0">
               <columns>
                 <TableColumn fx:id="idEmp" prefWidth="107.0" text="ID Dipendente" />
                 <TableColumn fx:id="surnameEmp" prefWidth="130.0" text="Cognome" />
                   <TableColumn fx:id="nameEmp" prefWidth="112.0" text="Nome" />
               </columns>
             </TableView>
-            <TableView fx:id="tableStrum" onMouseClicked="#strumentationAssign" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+            <TableView fx:id="tableStrum" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
               <columns>
                 <TableColumn fx:id="idStrum" prefWidth="133.0" text="ID Strumentazione" />
                 <TableColumn fx:id="prodStrum" prefWidth="105.0" text="Marca" />
                   <TableColumn fx:id="modelStrum" prefWidth="111.0" text="Modello" />
               </columns>
             </TableView>
-            <TableView fx:id="tableSpace" onMouseClicked="#spaceAssign" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+            <TableView fx:id="tableSpace" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
               <columns>
                 <TableColumn fx:id="idSpace" prefWidth="111.0" text="ID Impianto" />
                 <TableColumn fx:id="desSpace" prefWidth="237.0" text="Descrizione Impianto" />

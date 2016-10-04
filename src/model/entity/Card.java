@@ -13,6 +13,7 @@ import java.util.List;
 public class Card {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(
             name = "ID_SCHEDA",
             nullable = false

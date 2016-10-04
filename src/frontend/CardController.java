@@ -2,10 +2,12 @@ package frontend;
 
 import java.util.List;
 
+import api.dto.CardDto;
 import api.dto.EmployeeDto;
 import api.dto.SpaceDto;
 import api.dto.StrumentationDto;
 import api.utils.Enumerators;
+import ejb.service.CardService;
 import ejb.service.EmployeeService;
 import ejb.service.SpaceService;
 import ejb.service.StrumentationService;
@@ -13,17 +15,16 @@ import frontend.Dispatcher.ViewDispatcher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
+import main.MainClass;
 
 public class CardController {
 
 
     private EmployeeService employeeService = new EmployeeService();
     private SpaceService spaceService = new SpaceService();
-    StrumentationService strumentationService = new StrumentationService();
+    private StrumentationService strumentationService = new StrumentationService();
+    private CardService cardService = new CardService();
     private final ViewDispatcher dispatcher = ViewDispatcher.getDispatcher();
 
     List<EmployeeDto> employeeDto;
@@ -91,6 +92,11 @@ public class CardController {
 
     @FXML
     void btnInsert() {
+        CardDto dto = new CardDto();
+        dto.setHeaderCard(headerText.getText());
+        dto.setFooterCard(footerText.getText());
+        Integer idCard = cardService.insertCard(dto);
+        //TODO Relations
 
     }
 
@@ -101,31 +107,10 @@ public class CardController {
 
     @FXML
     void btnShow() {
-        strumentationDto = tableStrum.getSelectionModel().getSelectedItems();
-        employeeDto = tableEmp.getSelectionModel().getSelectedItems();
-        spaceDto = tableSpace.getSelectionModel().getSelectedItems();
+        ShowSelectedViewController.setStrumDto(tableStrum.getSelectionModel().getSelectedItems());
+        ShowSelectedViewController.setEmpDto(tableEmp.getSelectionModel().getSelectedItems());
+        ShowSelectedViewController.setSpDto(tableSpace.getSelectionModel().getSelectedItems());
         dispatcher.dialog(Enumerators.viewsPath.CARDDIALOGSELECTED.getPath());
-
-    }
-
-
-    @FXML
-    void employeeAssign() {
-
-
-    }
-
-
-    @FXML
-    void spaceAssign() {
-
-
-
-    }
-
-    @FXML
-    void strumentationAssign() {
-
 
 
     }

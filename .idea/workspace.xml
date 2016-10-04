@@ -9,18 +9,18 @@
     <bookmark url="file://$PROJECT_DIR$/src/frontend/RoleController.java" line="135" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d163710-4def-45f3-929f-59a9404e54ec" name="Default" comment="to fix null pointer exception">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/frontend/ShowSelectedView.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/frontend/ShowSelectedViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/api/utils/Enumerators$Alert.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/api/utils/Enumerators$Alert.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/api/utils/Enumerators$viewsPath.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/api/utils/Enumerators$viewsPath.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/HomePageController.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/HomePageController.class" />
+    <list default="true" id="3d163710-4def-45f3-929f-59a9404e54ec" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/api/dto/CardDto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/Dispatcher/ViewDispatcher.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/frontend/Dispatcher/ViewDispatcher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/main/MainClass.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/main/MainClass.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoIng/model/dao/CardDao.class" afterPath="$PROJECT_DIR$/out/production/ProgettoIng/model/dao/CardDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/utils/Enumerators.java" afterPath="$PROJECT_DIR$/src/api/utils/Enumerators.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/CardController.java" afterPath="$PROJECT_DIR$/src/frontend/CardController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/CardView.fxml" afterPath="$PROJECT_DIR$/src/frontend/CardView.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/Dispatcher/ViewDispatcher.java" afterPath="$PROJECT_DIR$/src/frontend/Dispatcher/ViewDispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/MainClass.java" afterPath="$PROJECT_DIR$/src/main/MainClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/ShowSelectedViewController.java" afterPath="$PROJECT_DIR$/src/frontend/ShowSelectedViewController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/dao/CardDao.java" afterPath="$PROJECT_DIR$/src/model/dao/CardDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/entity/Card.java" afterPath="$PROJECT_DIR$/src/model/entity/Card.java" />
     </list>
     <ignored path="ProgettoIng.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,54 +44,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ShowSelectedViewController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/ShowSelectedViewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1230#1231#0" expanded="true" />
-                <element signature="e#1259#1260#0" expanded="true" />
-                <element signature="e#1314#1315#0" expanded="true" />
-                <element signature="e#1350#1351#0" expanded="true" />
-                <element signature="e#1401#1402#0" expanded="true" />
-                <element signature="e#1432#1433#0" expanded="true" />
-                <element signature="e#1496#1497#0" expanded="true" />
-                <element signature="e#1536#1537#0" expanded="true" />
-                <element signature="e#1576#1577#0" expanded="true" />
-                <element signature="e#1604#1605#0" expanded="true" />
-                <element signature="e#1654#1655#0" expanded="true" />
-                <element signature="e#1688#1689#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CardController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/frontend/CardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+            <state relative-caret-position="240">
+              <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1055#1056#0" expanded="true" />
-                <element signature="e#1089#1090#0" expanded="true" />
-                <element signature="e#1148#1149#0" expanded="true" />
-                <element signature="e#1187#1188#0" expanded="true" />
-                <element signature="e#1230#1231#0" expanded="true" />
-                <element signature="e#1261#1262#0" expanded="true" />
+                <element signature="e#1069#1070#0" expanded="true" />
+                <element signature="e#1103#1104#0" expanded="true" />
+                <element signature="e#1162#1163#0" expanded="true" />
+                <element signature="e#1201#1202#0" expanded="true" />
+                <element signature="e#1244#1245#0" expanded="true" />
+                <element signature="e#1275#1276#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewDispatcher.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/frontend/Dispatcher/ViewDispatcher.java">
+      <file leaf-file-name="CardService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ejb/service/CardService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="345">
+              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+              <folding>
+                <element signature="e#876#877#0" expanded="true" />
+                <element signature="e#922#923#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/dao/CardDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseDaoImplementation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/dao/BaseDaoImplementation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/dto/CardDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+              <folding>
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#332#333#0" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#413#414#0" expanded="true" />
+                <element signature="e#457#458#0" expanded="true" />
+                <element signature="e#519#520#0" expanded="true" />
+                <element signature="e#556#557#0" expanded="true" />
+                <element signature="e#595#596#0" expanded="true" />
+                <element signature="e#651#652#0" expanded="true" />
+                <element signature="e#684#685#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#805#806#0" expanded="true" />
+                <element signature="e#842#843#0" expanded="true" />
+                <element signature="e#881#882#0" expanded="true" />
+                <element signature="e#937#938#0" expanded="true" />
+                <element signature="e#970#971#0" expanded="true" />
+                <element signature="e#1022#1023#0" expanded="true" />
+                <element signature="e#1091#1092#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,11 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/api/dto/EmployeeDto.java" />
-        <option value="$PROJECT_DIR$/src/model/dao/EmployeeDao.java" />
-        <option value="$PROJECT_DIR$/src/ejb/converter/EmployeeConverter.java" />
-        <option value="$PROJECT_DIR$/src/frontend/RoleController.java" />
-        <option value="$PROJECT_DIR$/src/ejb/service/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/frontend/EmployeeController.java" />
         <option value="$PROJECT_DIR$/src/frontend/SpaceView.fxml" />
         <option value="$PROJECT_DIR$/src/api/dto/SpaceDto.java" />
@@ -151,17 +174,14 @@
         <option value="$PROJECT_DIR$/src/model/dao/EmployeeSpaceDao.java" />
         <option value="$PROJECT_DIR$/src/ejb/service/BaseService.java" />
         <option value="$PROJECT_DIR$/src/model/dao/EmployeeStrumentationDao.java" />
-        <option value="$PROJECT_DIR$/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/EntityManager.class" />
         <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/model/entity/Strumentation.java" />
         <option value="$PROJECT_DIR$/src/model/entity/Employee.java" />
-        <option value="$PROJECT_DIR$/src/model/dao/BaseDaoImplementation.java" />
         <option value="$PROJECT_DIR$/src/model/entity/EmployeeStrumentation.java" />
         <option value="$PROJECT_DIR$/src/api/dto/AssociationDto.java" />
         <option value="$PROJECT_DIR$/src/frontend/AssociationController.java" />
         <option value="$PROJECT_DIR$/src/model/entity/SpaceEmployee.java" />
         <option value="$PROJECT_DIR$/src/frontend/AssociationListView.fxml" />
-        <option value="$PROJECT_DIR$/src/frontend/AssociationListViewController.java" />
         <option value="$PROJECT_DIR$/src/ejb/service/AssociationEmployeeStrumentationService.java" />
         <option value="$PROJECT_DIR$/src/ejb/service/AssociationEmployeeSpaceService.java" />
         <option value="$PROJECT_DIR$/src/api/utils/UtilDate.java" />
@@ -170,10 +190,18 @@
         <option value="$PROJECT_DIR$/src/frontend/ShowSelectedView.fxml" />
         <option value="$PROJECT_DIR$/src/api/utils/Enumerators.java" />
         <option value="$PROJECT_DIR$/src/main/MainClass.java" />
-        <option value="$PROJECT_DIR$/src/frontend/ShowSelectedViewController.java" />
         <option value="$PROJECT_DIR$/src/frontend/Dispatcher/UtilView.java" />
-        <option value="$PROJECT_DIR$/src/frontend/CardController.java" />
+        <option value="$PROJECT_DIR$/src/frontend/ShowSelectedViewController.java" />
         <option value="$PROJECT_DIR$/src/frontend/Dispatcher/ViewDispatcher.java" />
+        <option value="$PROJECT_DIR$/src/frontend/AssociationListViewController.java" />
+        <option value="$PROJECT_DIR$/src/ejb/converter/CardConverter.java" />
+        <option value="$PROJECT_DIR$/src/api/dto/CardDto.java" />
+        <option value="$PROJECT_DIR$/src/model/entity/Card.java" />
+        <option value="$PROJECT_DIR$/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/EntityManager.class" />
+        <option value="$PROJECT_DIR$/src/model/dao/BaseDaoImplementation.java" />
+        <option value="$PROJECT_DIR$/src/model/dao/CardDao.java" />
+        <option value="$PROJECT_DIR$/src/ejb/service/CardService.java" />
+        <option value="$PROJECT_DIR$/src/frontend/CardController.java" />
       </list>
     </option>
   </component>
@@ -265,7 +293,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
+              <option name="myItemId" value="ejb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -283,11 +311,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
+              <option name="myItemId" value="ejb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Dispatcher" />
+              <option name="myItemId" value="converter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vedemecum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vedemecum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vedemecum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vedemecum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dto" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,29 +375,29 @@
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="progettoing" />
-    <property name="SearchEverywhereHistoryKey" value="view&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/Dispatcher/ViewDispatcher.java&#10;MainCla&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/main/MainClass.java&#10;Homcontr&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/HomePageController.java&#10;Enumerators&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/api/utils/Enumerators.java&#10;Strum&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/StrumentationController.java&#10;emploc&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Spaceco&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/SpaceController.java&#10;Strumentatc&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/StrumentationController.java&#10;Empstrume&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/model/entity/EmployeeStrumentation.java&#10;Enumera&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/api/utils/Enumerators.java&#10;Dispa&#9;PSI&#9;JAVA://frontend.Dispatcher.ViewDispatcher&#10;employeec&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;space&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/SpaceEmployee.java&#10;pers&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/META-INF/persistence.xml&#10;Emplospa&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/EmployeeSpaceDao.java&#10;Emplspa&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/EmployeeSpaceDao.java&#10;Employee&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;Spaceem&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/SpaceEmployee.java&#10;Assoc&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/AssociationController.java&#10;Strumen&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/StrumentationController.java&#10;strumser&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/StrumentationService.java&#10;strcon&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/converter/StrumentationConverter.java&#10;spaceda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/SpaceDao.java&#10;employeeco&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Spaceser&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/SpaceService.java&#10;Space&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/SpaceController.java&#10;Strumenta&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/StrumentationController.java&#10;Ass&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/AssociationController.java&#10;Homeco&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/HomePageController.java&#10;EmployeeC&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Spacec&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/SpaceController.java&#10;Homecontr&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/HomePageController.java&#10;Enumerat&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/utils/Enumerators.java&#10;Empl&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Em&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;employee&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;employeecon&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Employeeda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/EmployeeDao.java&#10;employeeser&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/EmployeeService.java&#10;rolecontr&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/RoleController.java&#10;roleda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/RoleDao.java&#10;super&#9;PSI&#9;JAVA://ejb.converter.SuperConverter&#10;EmployeeDt&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/api/dto/EmployeeDto.java&#10;roledto&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/api/dto/RoleDto.java&#10;utilda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/utils/UtilDate.java&#10;roledao&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/RoleDao.java&#10;roles&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/RoleService.java&#10;emplo&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;Dis&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/Dispatcher/ViewDispatcher.java" />
+    <property name="SearchEverywhereHistoryKey" value="Card&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/ejb/service/CardService.java&#10;Viewd&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/Dispatcher/ViewDispatcher.java&#10;view&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/Dispatcher/ViewDispatcher.java&#10;MainCla&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/main/MainClass.java&#10;Homcontr&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/HomePageController.java&#10;Enumerators&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/api/utils/Enumerators.java&#10;Strum&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/StrumentationController.java&#10;emploc&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Spaceco&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/SpaceController.java&#10;Strumentatc&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/StrumentationController.java&#10;Empstrume&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/model/entity/EmployeeStrumentation.java&#10;Enumera&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/api/utils/Enumerators.java&#10;Dispa&#9;PSI&#9;JAVA://frontend.Dispatcher.ViewDispatcher&#10;employeec&#9;FILE&#9;file:///Users/simon/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;space&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/SpaceEmployee.java&#10;pers&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/META-INF/persistence.xml&#10;Emplospa&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/EmployeeSpaceDao.java&#10;Emplspa&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/EmployeeSpaceDao.java&#10;Employee&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;Spaceem&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/SpaceEmployee.java&#10;Assoc&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/AssociationController.java&#10;Strumen&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/StrumentationController.java&#10;strumser&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/StrumentationService.java&#10;strcon&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/converter/StrumentationConverter.java&#10;spaceda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/SpaceDao.java&#10;employeeco&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Spaceser&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/SpaceService.java&#10;Space&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/SpaceController.java&#10;Strumenta&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/StrumentationController.java&#10;Ass&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/AssociationController.java&#10;Homeco&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/HomePageController.java&#10;EmployeeC&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Spacec&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/SpaceController.java&#10;Homecontr&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/HomePageController.java&#10;Enumerat&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/utils/Enumerators.java&#10;Empl&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Em&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;employee&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java&#10;employeecon&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/EmployeeController.java&#10;Employeeda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/EmployeeDao.java&#10;employeeser&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/EmployeeService.java&#10;rolecontr&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/frontend/RoleController.java&#10;roleda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/RoleDao.java&#10;super&#9;PSI&#9;JAVA://ejb.converter.SuperConverter&#10;EmployeeDt&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/api/dto/EmployeeDto.java&#10;roledto&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/api/dto/RoleDto.java&#10;utilda&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/utils/UtilDate.java&#10;roledao&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/dao/RoleDao.java&#10;roles&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/ejb/service/RoleService.java&#10;emplo&#9;FILE&#9;file:///home/user/IdeaProjects/Vedemecum/src/model/entity/Employee.java" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="api" />
+      <recent name="frontend" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ejb.converter" />
+      <recent name="ejb.service" />
+      <recent name="model.dao" />
+      <recent name="api.dto" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/frontend" />
       <recent name="$PROJECT_DIR$/src/frontend/viewAndController" />
       <recent name="$PROJECT_DIR$/src/frontend/controller/gui" />
       <recent name="$PROJECT_DIR$/src/frontend/controller" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="api" />
-      <recent name="frontend" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="model.dao" />
-      <recent name="ejb.service" />
-      <recent name="api.dto" />
-      <recent name="ejb.converter" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MainClass">
@@ -853,7 +921,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475404008744</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="to fix null pointer exception">
+      <created>1475510849959</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1475510849959</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -876,7 +951,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35157546" sideWeight="0.54172987" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965213" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46077034" sideWeight="0.4582701" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5278174" sideWeight="0.4582701" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32524964" sideWeight="0.49603623" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20114122" sideWeight="0.49150622" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -886,7 +961,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24821173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51138085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47075605" sideWeight="0.4826063" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47014925" sideWeight="0.4826063" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -980,7 +1055,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/frontend/ShowSelectedViewController.java</url>
-          <line>94</line>
+          <line>95</line>
           <properties />
           <option name="timeStamp" value="64" />
         </line-breakpoint>
@@ -988,7 +1063,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="66" />
+      <option name="time" value="67" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -997,66 +1072,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/api/dto/StrumentationDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ejb/converter/SpaceConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_91/javafx-src.zip!/javafx/scene/control/MultipleSelectionModelBase.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/dao/SpaceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ejb/converter/StrumentationConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/dao/StrumentationDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ejb/service/StrumentationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="38" column="127" selection-start-line="38" selection-start-column="127" selection-end-line="38" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ejb/service/SpaceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/AssociationEmployeeView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ejb/service/AssociationService.java" />
     <entry file="file://$PROJECT_DIR$/src/api/dto/AssociationDto.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1082,13 +1097,6 @@
     </entry>
     <entry file="jar:///usr/local/java/jdk1.8.0_91/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
     <entry file="jar:///usr/local/java/jdk1.8.0_91/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class" />
-    <entry file="jar://$PROJECT_DIR$/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/EntityManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1162,13 +1170,6 @@
         <state relative-caret-position="135">
           <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="77" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/dao/BaseDaoImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1246,8 +1247,8 @@
         <state relative-caret-position="285">
           <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
           <folding>
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="false" />
+            <element signature="e#588#589#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1271,28 +1272,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/AssociationListViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="111" column="0" selection-start-line="104" selection-start-column="8" selection-end-line="111" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/utils/Enumerators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="1770" column="0" selection-start-line="1770" selection-start-column="0" selection-end-line="1770" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1305,47 +1288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="676" column="23" selection-start-line="676" selection-start-column="23" selection-end-line="676" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-          <folding>
-            <element signature="e#1366#1367#0" expanded="true" />
-            <element signature="e#1400#1401#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/ShowSelectedViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1230#1231#0" expanded="true" />
-            <element signature="e#1259#1260#0" expanded="true" />
-            <element signature="e#1314#1315#0" expanded="true" />
-            <element signature="e#1350#1351#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
-            <element signature="e#1536#1537#0" expanded="true" />
-            <element signature="e#1576#1577#0" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#1688#1689#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/Dispatcher/UtilView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1354,27 +1296,200 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/CardController.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+        <state relative-caret-position="135">
+          <caret line="676" column="23" selection-start-line="676" selection-start-column="23" selection-end-line="676" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1148#1149#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-            <element signature="e#1230#1231#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#1366#1367#0" expanded="false" />
+            <element signature="e#1400#1401#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/Dispatcher/ViewDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="289">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="1657" column="0" selection-start-line="1657" selection-start-column="0" selection-end-line="1657" selection-end-column="0" />
+          <folding>
+            <element signature="e#66921#66922#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8413" column="0" selection-start-line="8413" selection-start-column="0" selection-end-line="8413" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/javafx-src.zip!/javafx/event/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="2494" column="0" selection-start-line="2494" selection-start-column="0" selection-end-line="2494" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/AssociationListViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="110" column="56" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/ShowSelectedViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1339#1340#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
+            <element signature="e#1427#1428#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1537#1538#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1673#1674#0" expanded="true" />
+            <element signature="e#1701#1702#0" expanded="true" />
+            <element signature="e#1756#1757#0" expanded="true" />
+            <element signature="e#1783#1784#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ejb/converter/CardConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/dto/CardDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+          <folding>
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#881#882#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/entity/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/EntityManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/dao/BaseDaoImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/dao/CardDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ejb/service/CardService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding>
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/CardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1162#1163#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

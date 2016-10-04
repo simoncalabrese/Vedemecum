@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -48,32 +49,32 @@ public class ShowSelectedViewController{
     private TableColumn<SpaceDto,String> desSpace;
 
 
-    private List<EmployeeDto> empDto;
-    private List<StrumentationDto> strumDto;
-    private List<SpaceDto> spDto;
+    private static List<EmployeeDto> empDto = new ArrayList<>();
+    private static List<StrumentationDto> strumDto = new ArrayList<>();
+    private static List<SpaceDto> spDto = new ArrayList<>();
 
-    public List<EmployeeDto> getEmpDto() {
+    static List<EmployeeDto> getEmpDto() {
         return empDto;
     }
 
-    public void setEmpDto(List<EmployeeDto> empDto) {
-        this.empDto = empDto;
+    public static void setEmpDto(List<EmployeeDto> dto) {
+        empDto = dto;
     }
 
-    public List<StrumentationDto> getStrumDto() {
+    static List<StrumentationDto> getStrumDto() {
         return strumDto;
     }
 
-    public void setStrumDto(List<StrumentationDto> strumDto) {
-        this.strumDto = strumDto;
+    public static void setStrumDto(List<StrumentationDto> dto) {
+        strumDto = dto;
     }
 
-    public List<SpaceDto> getSpDto() {
+    static List<SpaceDto> getSpDto() {
         return spDto;
     }
 
-    public void setSpDto(List<SpaceDto> spDto) {
-        this.spDto = spDto;
+    public static void setSpDto(List<SpaceDto> dto) {
+        spDto = dto;
     }
 
     @FXML
@@ -93,15 +94,21 @@ public class ShowSelectedViewController{
     private void populateTable() {
 
         ObservableList<EmployeeDto> emp = FXCollections.observableArrayList();
-        getEmpDto().forEach(emp::add);
+        empDto.stream()
+                .filter(elem -> elem!=null)
+                .forEach(emp::add);
         tableEmp.setItems(emp);
 
         ObservableList<StrumentationDto> strum = FXCollections.observableArrayList();
-        getStrumDto().forEach(strum::add);
+        strumDto.stream()
+                .filter(elem -> elem!=null)
+                .forEach(strum::add);
         tableStrum.setItems(strum);
 
         ObservableList<SpaceDto> space = FXCollections.observableArrayList();
-        getSpDto().forEach(space::add);
+        spDto.stream()
+                .filter(elem -> elem!=null)
+                .forEach(space::add);
         tableSpace.setItems(space);
     }
 }

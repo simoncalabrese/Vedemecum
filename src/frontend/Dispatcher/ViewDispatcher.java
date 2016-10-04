@@ -10,6 +10,7 @@ import java.io.IOException;
 
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import main.MainClass;
 
 /**
@@ -51,8 +52,8 @@ public class ViewDispatcher {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainClass.class.getClassLoader().getResource((view)));
             AnchorPane pane = loader.load();
-            Stage dialogStage = MainClass.getDialogStage();
-            dialogStage.initModality(Modality.WINDOW_MODAL);
+            Stage dialogStage = new Stage();
+            dialogStage.initModality(Modality.APPLICATION_MODAL);
             dialogStage.initOwner(MainClass.getPrimaryStage());
             Scene scene = new Scene(pane);
             dialogStage.setScene(scene);
