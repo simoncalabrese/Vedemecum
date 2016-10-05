@@ -77,16 +77,18 @@ public class Employee {
     )
     private Role role;
 
+    @ManyToOne
+    @JoinColumn(
+            name = "CARD_FK"
+    )
+    private Card card;
+
     @OneToMany(
             targetEntity=EmployeeStrumentation.class,
             mappedBy = "employee"
     )
     private List<EmployeeStrumentation> employeeStrumentations;
 
-    @OneToMany(
-            mappedBy = "employee"
-    )
-    private List<Sdsi> sdsis;
 
     @OneToMany(
             mappedBy = "employee"
@@ -181,19 +183,19 @@ public class Employee {
         this.employeeStrumentations = employeeStrumentations;
     }
 
-    public List<Sdsi> getSdsis() {
-        return sdsis;
-    }
-
-    public void setSdsis(List<Sdsi> sdsis) {
-        this.sdsis = sdsis;
-    }
-
     public List<SpaceEmployee> getSpaceEmployees() {
         return spaceEmployees;
     }
 
     public void setSpaceEmployees(List<SpaceEmployee> spaceEmployees) {
         this.spaceEmployees = spaceEmployees;
+    }
+
+    public Card getCard() {
+        return card;
+    }
+
+    public void setCard(Card card) {
+        this.card = card;
     }
 }

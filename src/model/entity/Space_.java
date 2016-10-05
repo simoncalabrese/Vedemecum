@@ -11,7 +11,6 @@ public abstract class Space_ {
 
 	public static volatile SingularAttribute<Space, String> addImpianto;
 	public static volatile SingularAttribute<Space, Integer> roomNo;
-	public static volatile ListAttribute<Space, Sdsi> schedaDipStrumImps;
 	public static volatile SingularAttribute<Space, Integer> windowsNo;
 	public static volatile ListAttribute<Space, SpaceEmployee> spaceEmployees;
 	public static volatile SingularAttribute<Space, String> desImpianto;

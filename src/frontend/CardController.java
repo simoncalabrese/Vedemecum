@@ -1,11 +1,9 @@
 package frontend;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
-import api.dto.CardDto;
-import api.dto.EmployeeDto;
-import api.dto.SpaceDto;
-import api.dto.StrumentationDto;
+import api.dto.*;
 import api.utils.Enumerators;
 import ejb.service.CardService;
 import ejb.service.EmployeeService;
@@ -95,8 +93,27 @@ public class CardController {
         CardDto dto = new CardDto();
         dto.setHeaderCard(headerText.getText());
         dto.setFooterCard(footerText.getText());
-        Integer idCard = cardService.insertCard(dto);
-        //TODO Relations
+        dto.setEmployeeDtos(tableEmp
+                .getSelectionModel()
+                .getSelectedItems()
+                .stream()
+                .map((elem) -> Integer.valueOf(elem.getIdDipedente()))
+                .collect(Collectors.toList()));
+        dto.setSpaceDtos(tableSpace
+                .getSelectionModel()
+                .getSelectedItems()
+                .stream()
+                .map(elem -> Integer.valueOf(elem.getIdSpace()))
+                .collect(Collectors.toList()));
+        dto.setStrumentationDtos(tableStrum
+                .getSelectionModel()
+                .getSelectedItems()
+                .stream()
+                .map(elem -> Integer.valueOf(elem.getIdStrumentazione()))
+                .collect(Collectors.toList()));
+        if(cardService.insertCard(dto) == null){
+            dispatcher.alert(Enumerators.Alert.INSERT," Scheda");
+        }
 
     }
 

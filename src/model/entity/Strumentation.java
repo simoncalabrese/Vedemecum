@@ -50,15 +50,16 @@ public class Strumentation {
     private LocalDate dtAcquisto;
 
     @OneToMany(
-            targetEntity=EmployeeStrumentation.class,
+            targetEntity = EmployeeStrumentation.class,
             mappedBy = "strumentation"
     )
     private List<EmployeeStrumentation> employeeStrumentations;
 
-    @OneToMany(
-            mappedBy = "strumentation"
+    @ManyToOne
+    @JoinColumn(
+            name = "CARD_FK"
     )
-    private List<Sdsi> sdsis;
+    private Card card;
 
     public Integer getIdStrumentazione() {
         return idStrumentazione;
@@ -116,11 +117,11 @@ public class Strumentation {
         this.employeeStrumentations = employeeStrumentations;
     }
 
-    public List<Sdsi> getSdsis() {
-        return sdsis;
+    public Card getCard() {
+        return card;
     }
 
-    public void setSdsis(List<Sdsi> sdsis) {
-        this.sdsis = sdsis;
+    public void setCard(Card card) {
+        this.card = card;
     }
 }

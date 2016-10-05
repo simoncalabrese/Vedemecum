@@ -46,10 +46,12 @@ public class Space {
     )
     private Integer windowsNo;
 
-    @OneToMany(
-            mappedBy = "space"
+    @ManyToOne
+    @JoinColumn(
+            name = "CARD_FK"
     )
-    private List<Sdsi> schedaDipStrumImps;
+    private Card card;
+
 
     @OneToMany(
             mappedBy = "space"
@@ -104,19 +106,19 @@ public class Space {
         this.windowsNo = windowsNo;
     }
 
-    public List<Sdsi> getSchedaDipStrumImps() {
-        return schedaDipStrumImps;
-    }
-
-    public void setSchedaDipStrumImps(List<Sdsi> schedaDipStrumImps) {
-        this.schedaDipStrumImps = schedaDipStrumImps;
-    }
-
     public List<SpaceEmployee> getSpaceEmployees() {
         return spaceEmployees;
     }
 
     public void setSpaceEmployees(List<SpaceEmployee> spaceEmployees) {
         this.spaceEmployees = spaceEmployees;
+    }
+
+    public Card getCard() {
+        return card;
+    }
+
+    public void setCard(Card card) {
+        this.card = card;
     }
 }

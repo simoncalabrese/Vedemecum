@@ -6,6 +6,8 @@ import api.dto.RoleDto;
 import api.utils.UtilDate;
 import model.entity.Employee;
 
+import java.util.List;
+
 /**
  * Created by simon on 31/08/16.
  */
@@ -29,6 +31,7 @@ public class EmployeeConverter {
                     employee.setRole(RoleConverter.ToEntity.toMansioneEntity.apply(dto1));
                     return employee;
                 };
+
     }
 
     public static class ToDto {

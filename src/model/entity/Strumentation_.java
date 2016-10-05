@@ -17,7 +17,6 @@ public abstract class Strumentation_ {
 	public static volatile SingularAttribute<Strumentation, Integer> idStrumentazione;
 	public static volatile SingularAttribute<Strumentation, String> modelloStrumentazione;
 	public static volatile SingularAttribute<Strumentation, Integer> pezzi;
-	public static volatile ListAttribute<Strumentation, Sdsi> sdsis;
 
 }
 

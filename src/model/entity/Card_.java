@@ -12,7 +12,7 @@ public abstract class Card_ {
 	public static volatile SingularAttribute<Card, Integer> idScheda;
 	public static volatile SingularAttribute<Card, String> bottom;
 	public static volatile SingularAttribute<Card, String> header;
-	public static volatile ListAttribute<Card, Sdsi> schedaDipStrumImp;
+
 
 }
 

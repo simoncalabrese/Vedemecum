@@ -33,7 +33,19 @@ public class Card {
     @OneToMany(
             mappedBy = "card"
     )
-    private List<Sdsi> schedaDipStrumImp;
+    private List<Employee> employees;
+
+
+    @OneToMany(
+            mappedBy = "card"
+    )
+    private List<Space> spaces;
+
+
+    @OneToMany(
+            mappedBy = "card"
+    )
+    private List<Strumentation> strumentations;
 
     public Integer getIdScheda() {
         return idScheda;
@@ -59,11 +71,27 @@ public class Card {
         this.bottom = bottom;
     }
 
-    public List<Sdsi> getSchedaDipStrumImp() {
-        return schedaDipStrumImp;
+    public List<Employee> getEmployees() {
+        return employees;
     }
 
-    public void setSchedaDipStrumImp(List<Sdsi> schedaDipStrumImp) {
-        this.schedaDipStrumImp = schedaDipStrumImp;
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
+    }
+
+    public List<Space> getSpaces() {
+        return spaces;
+    }
+
+    public void setSpaces(List<Space> spaces) {
+        this.spaces = spaces;
+    }
+
+    public List<Strumentation> getStrumentations() {
+        return strumentations;
+    }
+
+    public void setStrumentations(List<Strumentation> strumentations) {
+        this.strumentations = strumentations;
     }
 }

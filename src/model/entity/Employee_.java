@@ -17,7 +17,6 @@ public abstract class Employee_ {
 	public static volatile ListAttribute<Employee, SpaceEmployee> spaceEmployees;
 	public static volatile SingularAttribute<Employee, String> telephone;
 	public static volatile SingularAttribute<Employee, String> nomeDipendente;
-	public static volatile ListAttribute<Employee, Sdsi> sdsis;
 	public static volatile SingularAttribute<Employee, String> sessoDipendente;
 	public static volatile SingularAttribute<Employee, Date> dtNascita;
 	public static volatile ListAttribute<Employee, EmployeeStrumentation> employeeStrumentations;

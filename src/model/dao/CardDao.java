@@ -1,6 +1,5 @@
 package model.dao;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import model.entity.Card;
 import model.entity.Card_;
 
