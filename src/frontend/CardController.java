@@ -119,6 +119,7 @@ public class CardController {
 
     @FXML
     void btnView() {
+        dispatcher.dialog(Enumerators.viewsPath.CARDSELECTIONDIALOG.getPath());
 
     }
 

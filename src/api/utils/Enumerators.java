@@ -15,7 +15,8 @@ public class Enumerators {
         STRUMENTATION("frontend/StrumentationView.fxml"),
         ASSOCIATION("frontend/AssociationEmployeeView.fxml"),
         ASSOCIATIONDIALOG("frontend/AssociationListView.fxml"),
-        CARDDIALOGSELECTED("frontend/ShowSelectedView.fxml");
+        CARDDIALOGSELECTED("frontend/ShowSelectedView.fxml"),
+        CARDSELECTIONDIALOG("frontend/CardSelectDialog.fxml");
 
 
         private String path;
